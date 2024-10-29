@@ -1,3 +1,6 @@
+using AppointmentManagement.Data;
+using AppointmentManagement.Models;
+using Microsoft.EntityFrameworkCore;
 public class AppointmentRepository : IAppointmentRepository
 {
     private readonly AppDbContext _context;

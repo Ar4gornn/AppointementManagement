@@ -1,5 +1,8 @@
-namespace AppointmentManagement.Repositories;
+using AppointmentManagement.Data;
+using AppointmentManagement.Models;
+using Microsoft.EntityFrameworkCore;
 
+namespace AppointmentManagement.Repositories;
 public class AppointmentTypeRepository : IAppointmentTypeRepository
 {
     private readonly AppDbContext _context;

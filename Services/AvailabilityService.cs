@@ -1,3 +1,8 @@
+using AppointmentManagement.Repositories;
+using AppointmentManagement.Models;
+using AppointmentManagement.DTO;
+
+namespace AppointmentManagement.Services;
 public class AvailabilityService : IAvailabilityService
 {
     private readonly IAvailabilityRepository _availabilityRepo;

@@ -1,3 +1,8 @@
+using AppointmentManagement.Repositories;
+using AppointmentManagement.Models;
+using AppointmentManagement.DTO;
+
+namespace AppointmentManagement.Services;
 public class UnavailabilityService : IUnavailabilityService
 {
     private readonly IUnavailabilityRepository _unavailabilityRepo;
@@ -17,7 +22,7 @@ public class UnavailabilityService : IUnavailabilityService
             StartTime = u.StartTime,
             EndTime = u.EndTime,
             IsAllDay = u.IsAllDay
-        });
+        }).ToList();
     }
 
     public async Task<UnavailabilityDto> CreateUnavailability(CreateUnavailabilityDto dto)

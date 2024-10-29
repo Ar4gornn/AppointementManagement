@@ -1,3 +1,5 @@
+using AppointmentManagement.Models;
+
 public interface IAppointmentRepository
 {
     Task<IEnumerable<Appointment>> GetAllAppointments();

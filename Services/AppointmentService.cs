@@ -1,83 +1,81 @@
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using AppointmentManagement.DTO;
 using AppointmentManagement.Models;
-using AppointmentManagement.Repositories;
 using AutoMapper;
 
-namespace AppointmentManagement.Services;
-public class AppointmentService : IAppointmentService
+namespace AppointmentManagement.Services
 {
-    private readonly IAppointmentRepository _appointmentRepository;
-    private readonly IMapper _mapper;
-
-    public AppointmentService(IAppointmentRepository appointmentRepository, IMapper mapper)
+    public class AppointmentService : IAppointmentService
     {
-        _appointmentRepository = appointmentRepository;
-        _mapper = mapper;
-    }
+        private readonly IAppointmentRepository _appointmentRepository;
+        private readonly IMapper _mapper;
 
-    public async Task<IEnumerable<ReadAppointmentDto>> GetAppointmentByClinicId(Guid clinicId, DateTime startDate, DateTime endDate)
-    {
-        var appointments = await _appointmentRepository.GetAppointmentsByClinicId(clinicId, startDate, endDate);
-        return _mapper.Map<IEnumerable<ReadAppointmentDto>>(appointments);
-    }
+        public AppointmentService(IAppointmentRepository appointmentRepository, IMapper mapper)
+        {
+            _appointmentRepository = appointmentRepository;
+            _mapper = mapper;
+        }
 
-    public async Task<ReadAppointmentDto> CreateAppointment(CreateAppointmentDto createAppointmentDto)
-    {
-        var appointment = _mapper.Map<Appointment>(createAppointmentDto);
-        await _appointmentRepository.AddAppointment(appointment);
-        return _mapper.Map<ReadAppointmentDto>(appointment);
-    }
+        public async Task<IEnumerable<ReadAppointmentDto>> GetAppointmentByClinicId(Guid clinicId, DateTime startDate, DateTime endDate)
+        {
+            var appointments = await _appointmentRepository.GetAppointmentsByClinicId(clinicId, startDate, endDate);
+            return _mapper.Map<IEnumerable<ReadAppointmentDto>>(appointments);
+        }
 
-    public async Task<ReadAppointmentDto> RescheduleAppointment(Guid appointmentId, DateTime startAt, DateTime endAt)
-    {
-        var appointment = await _appointmentRepository.GetAppointmentById(appointmentId);
-        if (appointment == null) throw new KeyNotFoundException("Appointment not found");
+        public async Task<ReadAppointmentDto> CreateAppointment(CreateAppointmentDto createAppointmentDto)
+        {
+            var appointment = _mapper.Map<Appointment>(createAppointmentDto);
+            await _appointmentRepository.AddAppointment(appointment);
+            return _mapper.Map<ReadAppointmentDto>(appointment);
+        }
 
-        appointment.StartAt = startAt;
-        appointment.EndAt = endAt;
-        await _appointmentRepository.UpdateAppointment(appointment);
-        return _mapper.Map<ReadAppointmentDto>(appointment);
-    }
+        public async Task<ReadAppointmentDto> RescheduleAppointment(Guid appointmentId, DateTime startAt, DateTime endAt)
+        {
+            var appointment = await _appointmentRepository.GetAppointmentById(appointmentId);
+            if (appointment == null) throw new KeyNotFoundException("Appointment not found");
 
-    public async Task DeleteAppointment(Guid appointmentId)
-    {
-        await _appointmentRepository.DeleteAppointment(appointmentId);
-    }
+            appointment.StartAt = startAt;
+            appointment.EndAt = endAt;
+            await _appointmentRepository.UpdateAppointment(appointment);
+            return _mapper.Map<ReadAppointmentDto>(appointment);
+        }
 
-    public async Task<ReadAppointmentDto> UpdateAppointment(Guid appointmentId, UpdateAppointmentDto updateAppointmentDto)
-    {
-        var appointment = await _appointmentRepository.GetAppointmentById(appointmentId);
-        if (appointment == null) throw new KeyNotFoundException("Appointment not found");
+        public async Task DeleteAppointment(Guid appointmentId)
+        {
+            await _appointmentRepository.DeleteAppointment(appointmentId);
+        }
 
-        _mapper.Map(updateAppointmentDto, appointment);
-        await _appointmentRepository.UpdateAppointment(appointment);
-        return _mapper.Map<ReadAppointmentDto>(appointment);
-    }
+        public async Task<ReadAppointmentDto> UpdateAppointment(Guid appointmentId, UpdateAppointmentDto updateAppointmentDto)
+        {
+            var appointment = await _appointmentRepository.GetAppointmentById(appointmentId);
+            if (appointment == null) throw new KeyNotFoundException("Appointment not found");
 
-    public async Task ApproveAppointment(Guid appointmentId, bool isApproved)
-    {
-        var appointment = await _appointmentRepository.GetAppointmentById(appointmentId);
-        if (appointment == null) throw new KeyNotFoundException("Appointment not found");
+            _mapper.Map(updateAppointmentDto, appointment);
+            await _appointmentRepository.UpdateAppointment(appointment);
+            return _mapper.Map<ReadAppointmentDto>(appointment);
+        }
 
-        appointment.Status = isApproved ? 1 : 0; // Example: 1 is approved, 0 is not
-        await _appointmentRepository.UpdateAppointment(appointment);
-    }
+        public async Task ApproveAppointment(Guid appointmentId, bool isApproved)
+        {
+            var appointment = await _appointmentRepository.GetAppointmentById(appointmentId);
+            if (appointment == null) throw new KeyNotFoundException("Appointment not found");
 
-    public async Task SetAppointmentShowedUp(Guid appointmentId, bool showedUp)
-    {
-        var appointment = await _appointmentRepository.GetAppointmentById(appointmentId);
-        if (appointment == null) throw new KeyNotFoundException("Appointment not found");
+            appointment.Status = isApproved ? 1 : 0; // Example: 1 is approved, 0 is not
+            await _appointmentRepository.UpdateAppointment(appointment);
+        }
 
-        appointment.ShowedUp = showedUp;
-        await _appointmentRepository.UpdateAppointment(appointment);
-    }
+        public async Task SetAppointmentShowedUp(Guid appointmentId, bool showedUp)
+        {
+            var appointment = await _appointmentRepository.GetAppointmentById(appointmentId);
+            if (appointment == null) throw new KeyNotFoundException("Appointment not found");
 
-    public async Task<IEnumerable<ReadAppointmentDto>> GetAppointmentByPatientID(string patientId)
-    {
-        var appointments = await _appointmentRepository.GetAppointmentByPatientID(patientId);
-        return _mapper.Map<IEnumerable<ReadAppointmentDto>>(appointments);
+            appointment.ShowedUp = showedUp;
+            await _appointmentRepository.UpdateAppointment(appointment);
+        }
+
+        public async Task<IEnumerable<ReadAppointmentDto>> GetAppointmentByPatientID(string patientId)
+        {
+            var appointments = await _appointmentRepository.GetAppointmentByPatientID(patientId);
+            return _mapper.Map<IEnumerable<ReadAppointmentDto>>(appointments);
+        }
     }
 }

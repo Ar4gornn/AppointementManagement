@@ -1,3 +1,5 @@
+using AppointmentManagement.Models;
+
 namespace AppointmentManagement.Repositories;
 
 public interface IAvailabilityRepository

@@ -2,7 +2,6 @@ namespace AppointmentManagement.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using AppointmentManagement.Services;
 using AppointmentManagement.DTO;
-using AppointmentManagement.Services;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -21,9 +20,8 @@ public class AvailabilityController : ControllerBase
     {
         try
         {
-        var unavailabilities = await _availabilityService.GetClinicUnavailabilities(clinicId, startDate, endDate);
-        return Ok(unavailabilities);
-            
+            var unavailabilities = await _availabilityService.GetClinicUnavailabilities(clinicId, startDate, endDate);
+            return Ok(unavailabilities);
         }
         catch (Exception ex)
         {

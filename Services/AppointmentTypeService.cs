@@ -1,3 +1,8 @@
+using AppointmentManagement.Repositories;
+using AppointmentManagement.Models;
+using AppointmentManagement.DTO;
+
+namespace AppointmentManagement.Services;
 public class AppointmentTypeService : IAppointmentTypeService
 {
     private readonly IAppointmentTypeRepository _appointmentTypeRepo;

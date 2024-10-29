@@ -1,3 +1,5 @@
+using AppointmentManagement.DTO;
+
 public interface IUnavailabilityService
 {
     Task<IEnumerable<UnavailabilityDto>> GetUnavailabilityByClinicId(Guid clinicId);

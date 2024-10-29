@@ -1,3 +1,7 @@
+using AppointmentManagement.Data;
+using AppointmentManagement.Models;
+using Microsoft.EntityFrameworkCore;
+
 namespace AppointmentManagement.Repositories;
 
 public class UnavailabilityRepository : IUnavailabilityRepository
