@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "ttX4MB6yJ/469kC1LadP3/cN1GFk+NNhkdUz0l/7sFU=",
+  "Source": "AppointmentManagement",
+  "BasePath": "_content/AppointmentManagement",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
