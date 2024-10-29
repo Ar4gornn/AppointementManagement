@@ -17,7 +17,8 @@ public class AppointmentController : ControllerBase
 
     // Get all appointments for a specific clinic within a date range
     [HttpGet("clinic/{clinicId}")]
-    public async Task<ActionResult<IEnumerable<ReadAppointmentDto>>> GetAppointmentByClinicId(Guid clinicId, DateTime startDate, DateTime endDate)
+    public async Task<ActionResult<IEnumerable<ReadAppointmentDto>>> GetAppointmentByClinicId(Guid clinicId,
+        DateTime startDate, DateTime endDate)
     {
         var appointments = await _appointmentService.GetAppointmentByClinicId(clinicId, startDate, endDate);
         return Ok(appointments);
@@ -25,15 +26,18 @@ public class AppointmentController : ControllerBase
 
     // Create a new appointment
     [HttpPost]
-    public async Task<ActionResult<ReadAppointmentDto>> CreateAppointment([FromBody] CreateAppointmentDto createAppointmentDto)
+    public async Task<ActionResult<ReadAppointmentDto>> CreateAppointment(
+        [FromBody] CreateAppointmentDto createAppointmentDto)
     {
         var createdAppointment = await _appointmentService.CreateAppointment(createAppointmentDto);
-        return CreatedAtAction(nameof(GetAppointmentByClinicId), new { clinicId = createdAppointment.ClinicId }, createdAppointment);
+        return CreatedAtAction(nameof(GetAppointmentByClinicId), new { clinicId = createdAppointment.ClinicId },
+            createdAppointment);
     }
 
     // Reschedule an existing appointment
     [HttpPut("reschedule/{appointmentId}")]
-    public async Task<ActionResult<ReadAppointmentDto>> RescheduleAppointment(Guid appointmentId, DateTime startAt, DateTime endAt)
+    public async Task<ActionResult<ReadAppointmentDto>> RescheduleAppointment(Guid appointmentId, DateTime startAt,
+        DateTime endAt)
     {
         var updatedAppointment = await _appointmentService.RescheduleAppointment(appointmentId, startAt, endAt);
         return Ok(updatedAppointment);
@@ -49,7 +53,8 @@ public class AppointmentController : ControllerBase
 
     // Update an existing appointment
     [HttpPut("{appointmentId}")]
-    public async Task<ActionResult<ReadAppointmentDto>> UpdateAppointment(Guid appointmentId, [FromBody] UpdateAppointmentDto updateAppointmentDto)
+    public async Task<ActionResult<ReadAppointmentDto>> UpdateAppointment(Guid appointmentId,
+        [FromBody] UpdateAppointmentDto updateAppointmentDto)
     {
         var updatedAppointment = await _appointmentService.UpdateAppointment(appointmentId, updateAppointmentDto);
         return Ok(updatedAppointment);
@@ -73,8 +78,10 @@ public class AppointmentController : ControllerBase
 
     // Get all appointments by Patient ID
     [HttpGet()]
-    public async Task<ActionResult<IEnumerable<ReadAppointmentDto>>> GetAppointmentByPatientID(string patientId, DateTime from, DateTime to)
+    public async Task<ActionResult<IEnumerable<ReadAppointmentDto>>> GetAppointmentByPatientID(string patientId,
+        DateTime from, DateTime to)
     {
         var appointments = await _appointmentService.GetAppointmentByPatientID(patientId, from, to);
         return Ok(appointments);
     }
+}

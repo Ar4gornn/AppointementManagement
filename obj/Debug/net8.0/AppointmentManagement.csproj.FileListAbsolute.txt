@@ -36,3 +36,4 @@ C:\Users\alexg\OneDrive\Desktop\AppointmentManagement\obj\Debug\net8.0\refint\Ap
 C:\Users\alexg\OneDrive\Desktop\AppointmentManagement\obj\Debug\net8.0\AppointmentManagement.pdb
 C:\Users\alexg\OneDrive\Desktop\AppointmentManagement\obj\Debug\net8.0\AppointmentManagement.genruntimeconfig.cache
 C:\Users\alexg\OneDrive\Desktop\AppointmentManagement\obj\Debug\net8.0\ref\AppointmentManagement.dll
+C:\Users\alexg\OneDrive\Desktop\AppointmentManagement\obj\Debug\net8.0\AppointmentManagement.sourcelink.json
