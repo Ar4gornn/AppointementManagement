@@ -1,12 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AppointmentManagement.Data;
-using AppointmentManagement.Models;
-using Microsoft.EntityFrameworkCore;
-
-namespace AppointmentManagement.Repositories;
 public class AppointmentRepository : IAppointmentRepository
 {
     private readonly AppDbContext _context;
@@ -16,44 +7,37 @@ public class AppointmentRepository : IAppointmentRepository
         _context = context;
     }
 
-    public async Task<IEnumerable<Appointment>> GetAppointmentsByClinicId(Guid clinicId, DateTime startDate, DateTime endDate)
+    public async Task<IEnumerable<Appointment>> GetAllAppointments()
     {
-        return await _context.Appointments
-            .Where(a => a.ClinicId == clinicId && a.StartAt >= startDate && a.EndAt <= endDate)
-            .ToListAsync();
+        return await _context.Appointments.ToListAsync();
     }
 
-    public async Task AddAppointment(Appointment appointment)
+    public async Task<Appointment> GetAppointmentById(Guid id)
     {
-        await _context.Appointments.AddAsync(appointment);
+        return await _context.Appointments.FindAsync(id);
+    }
+
+    public async Task<Appointment> AddAppointment(Appointment appointment)
+    {
+        _context.Appointments.Add(appointment);
         await _context.SaveChangesAsync();
+        return appointment;
     }
 
-    public async Task<Appointment> GetAppointmentById(Guid appointmentId)
+    public async Task<Appointment> UpdateAppointment(Appointment appointment)
     {
-        return await _context.Appointments.FindAsync(appointmentId);
-    }
-
-    public async Task UpdateAppointment(Appointment appointment)
-    {
-        _context.Entry(appointment).State = EntityState.Modified;
+        _context.Appointments.Update(appointment);
         await _context.SaveChangesAsync();
+        return appointment;
     }
 
-    public async Task DeleteAppointment(Guid appointmentId)
+    public async Task<bool> DeleteAppointment(Guid id)
     {
-        var appointment = await GetAppointmentById(appointmentId);
-        if (appointment != null)
-        {
-            _context.Appointments.Remove(appointment);
-            await _context.SaveChangesAsync();
-        }
-    }
+        var appointment = await _context.Appointments.FindAsync(id);
+        if (appointment == null) return false;
 
-    public async Task<IEnumerable<Appointment>> GetAppointmentByPatientID(string patientId)
-    {
-        return await _context.Appointments
-            .Where(a => a.PatientId == patientId)
-            .ToListAsync();
+        _context.Appointments.Remove(appointment);
+        await _context.SaveChangesAsync();
+        return true;
     }
 }
