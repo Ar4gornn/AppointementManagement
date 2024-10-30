@@ -8,6 +8,6 @@ public class UpdateAppointmentDto
     public string PatientPhone { get; set; }
     public string Type { get; set; }
     public string Notes { get; set; }
-    public DateTime StartAt { get; set; }
-    public DateTime EndAt { get; set; }
+    public TimeSpan StartAt { get; set; }
+    public TimeSpan EndAt { get; set; }
 }

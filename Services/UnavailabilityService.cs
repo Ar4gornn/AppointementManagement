@@ -1,6 +1,7 @@
 using AppointmentManagement.Repositories;
 using AppointmentManagement.Models;
 using AppointmentManagement.DTO;
+using System;
 
 namespace AppointmentManagement.Services;
 public class UnavailabilityService(IUnavailabilityRepository unavailabilityRepo) : IUnavailabilityService

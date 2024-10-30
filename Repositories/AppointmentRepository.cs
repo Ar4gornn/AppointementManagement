@@ -54,8 +54,14 @@ namespace AppointmentManagement.Repositories
         }
         public async Task<IEnumerable<Appointment>> GetAppointmentsByPatientId(string patientId, DateTime from, DateTime to)
         {
+            Guid patientGuid;
+            if (!Guid.TryParse(patientId, out patientGuid))
+            {
+                throw new ArgumentException("Invalid patient ID format", nameof(patientId));
+            }
+
             return await _context.Appointments
-                .Where(a => a.PatientId == patientId && a.StartAt >= from && a.EndAt <= to)
+                .Where(a => a.PatientId == patientGuid && a.StartAt >= from && a.EndAt <= to)
                 .ToListAsync();
         }
     }

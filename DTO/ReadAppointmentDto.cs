@@ -8,8 +8,8 @@ public class ReadAppointmentDto
     public string PatientId { get; set; }
     public string PatientName { get; set; }
     public string PatientPhone { get; set; }
-    public DateTime StartAt { get; set; }
-    public DateTime EndAt { get; set; }
+    public TimeSpan StartAt { get; set; }
+    public TimeSpan EndAt { get; set; }
     public string Type { get; set; }
     public int Status { get; set; }
     public string Notes { get; set; }

@@ -106,16 +106,16 @@ public class DataSeeder
                 {
                     Id = Guid.NewGuid(),
                     ClinicId = Guid.NewGuid(),
-                    StartTime = DateTime.UtcNow.AddHours(-1),
-                    EndTime = DateTime.UtcNow.AddHours(1),
+                    StartTime = DateTime.UtcNow.AddHours(-1).TimeOfDay,
+                    EndTime = DateTime.UtcNow.AddHours(1).TimeOfDay,
                     IsAllDay = false
                 },
                 new Unavailability
                 {
                     Id = Guid.NewGuid(),
                     ClinicId = Guid.NewGuid(),
-                    StartTime = DateTime.UtcNow.AddDays(2),
-                    EndTime = DateTime.UtcNow.AddDays(2).AddHours(3),
+                    StartTime = DateTime.UtcNow.AddDays(2).TimeOfDay,
+                    EndTime = DateTime.UtcNow.AddDays(2).AddHours(3).TimeOfDay,
                     IsAllDay = false
                 }
             );
