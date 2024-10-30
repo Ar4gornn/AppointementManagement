@@ -4,8 +4,6 @@ using AppointmentManagement.Services;
 
 namespace AppointmentManagement.Controllers
 {
-
-
     [ApiController]
     [Route("api/[controller]")]
     public class AppointmentController : ControllerBase
@@ -75,9 +73,9 @@ namespace AppointmentManagement.Controllers
 
         // Get all appointments by Patient ID within a date range
         [HttpGet("patient/{patientId}")]
-        public async Task<ActionResult<IEnumerable<ReadAppointmentDto>>> GetAppointmentByPatientID(string patientId, DateTime from, DateTime to)
+        public async Task<ActionResult<IEnumerable<ReadAppointmentDto>>> GetAppointmentByPatientId(string patientId, DateTime from, DateTime to)
         {
-            var appointments = await _appointmentService.GetAppointmentByPatientID(patientId, from, to);
+            var appointments = await _appointmentService.GetAppointmentByPatientId(patientId, from, to);
             return Ok(appointments);
         }
     }

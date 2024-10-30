@@ -1,7 +1,8 @@
-namespace AppointmentManagement.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using AppointmentManagement.DTO;
 using AppointmentManagement.Services;
+
+namespace AppointmentManagement.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -24,9 +25,9 @@ public class AvailabilityController : ControllerBase
 
     // Create availability records
     [HttpPost("availabilities")]
-    public async Task<IActionResult> CreateAvailablities(Guid clinicId, List<CreateAvailabilityDto> availabilities)
+    public async Task<IActionResult> CreateAvailabilities(Guid clinicId, List<CreateAvailabilityDto> availabilities)
     {
-        await _availabilityService.CreateAvailablities(clinicId, availabilities);
+        await _availabilityService.CreateAvailabilities(clinicId, availabilities);
         return StatusCode(201);
     }
 

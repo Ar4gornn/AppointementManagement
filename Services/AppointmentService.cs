@@ -1,6 +1,7 @@
 using AppointmentManagement.DTO;
 using AppointmentManagement.Models;
 using AutoMapper;
+using AppointmentManagement.Repositories;
 
 namespace AppointmentManagement.Services
 {
@@ -54,27 +55,29 @@ namespace AppointmentManagement.Services
             return _mapper.Map<ReadAppointmentDto>(appointment);
         }
 
-        public async Task ApproveAppointment(Guid appointmentId, bool isApproved)
+        public async Task<ReadAppointmentDto> ApproveAppointment(Guid appointmentId, bool isApproved)
         {
             var appointment = await _appointmentRepository.GetAppointmentById(appointmentId);
             if (appointment == null) throw new KeyNotFoundException("Appointment not found");
 
             appointment.Status = isApproved ? 1 : 0; // Example: 1 is approved, 0 is not
             await _appointmentRepository.UpdateAppointment(appointment);
+            return _mapper.Map<ReadAppointmentDto>(appointment);
         }
 
-        public async Task SetAppointmentShowedUp(Guid appointmentId, bool showedUp)
+        public async Task<ReadAppointmentDto> SetAppointmentShowedUp(Guid appointmentId, bool showedUp)
         {
             var appointment = await _appointmentRepository.GetAppointmentById(appointmentId);
             if (appointment == null) throw new KeyNotFoundException("Appointment not found");
 
             appointment.ShowedUp = showedUp;
             await _appointmentRepository.UpdateAppointment(appointment);
+            return _mapper.Map<ReadAppointmentDto>(appointment);
         }
 
-        public async Task<IEnumerable<ReadAppointmentDto>> GetAppointmentByPatientId(string patientId)
+        public async Task<IEnumerable<ReadAppointmentDto>> GetAppointmentByPatientId(string patientId, DateTime from, DateTime to)
         {
-            var appointments = await _appointmentRepository.GetAppointmentByPatientId(patientId);
+            var appointments = await _appointmentRepository.GetAppointmentsByPatientId(patientId, from, to);
             return _mapper.Map<IEnumerable<ReadAppointmentDto>>(appointments);
         }
     }
