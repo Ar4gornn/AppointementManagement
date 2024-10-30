@@ -16,7 +16,8 @@ namespace AppointmentManagement.Services
             _mapper = mapper;
         }
 
-        public async Task<IEnumerable<ReadAppointmentDto>> GetAppointmentByClinicId(Guid clinicId, DateTime startDate, DateTime endDate)
+        // Get appointments by clinic
+        public async Task<IEnumerable<ReadAppointmentDto>> GetAppointmentsByClinicId(Guid clinicId, DateTime startDate, DateTime endDate)
         {
             var appointments = await _appointmentRepository.GetAppointmentsByClinicId(clinicId, startDate, endDate);
             return _mapper.Map<IEnumerable<ReadAppointmentDto>>(appointments);
@@ -75,7 +76,7 @@ namespace AppointmentManagement.Services
             return _mapper.Map<ReadAppointmentDto>(appointment);
         }
 
-        public async Task<IEnumerable<ReadAppointmentDto>> GetAppointmentByPatientId(string patientId, DateTime from, DateTime to)
+        public async Task<IEnumerable<ReadAppointmentDto>> GetAppointmentsByPatientId(string patientId, DateTime from, DateTime to)
         {
             var appointments = await _appointmentRepository.GetAppointmentsByPatientId(patientId, from, to);
             return _mapper.Map<IEnumerable<ReadAppointmentDto>>(appointments);

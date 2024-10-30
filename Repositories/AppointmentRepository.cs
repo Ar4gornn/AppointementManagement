@@ -46,5 +46,17 @@ namespace AppointmentManagement.Repositories
             await _context.SaveChangesAsync();
             return true;
         }
+        public async Task<IEnumerable<Appointment>> GetAppointmentsByClinicId(Guid clinicId, DateTime startDate, DateTime endDate)
+        {
+            return await _context.Appointments
+                .Where(a => a.ClinicId == clinicId && a.StartAt >= startDate && a.EndAt <= endDate)
+                .ToListAsync();
+        }
+        public async Task<IEnumerable<Appointment>> GetAppointmentsByPatientId(string patientId, DateTime from, DateTime to)
+        {
+            return await _context.Appointments
+                .Where(a => a.PatientId == patientId && a.StartAt >= from && a.EndAt <= to)
+                .ToListAsync();
+        }
     }
 }

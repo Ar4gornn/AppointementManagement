@@ -37,3 +37,10 @@ C:\Users\alexg\OneDrive\Desktop\AppointmentManagement\obj\Debug\net8.0\Appointme
 C:\Users\alexg\OneDrive\Desktop\AppointmentManagement\obj\Debug\net8.0\AppointmentManagement.genruntimeconfig.cache
 C:\Users\alexg\OneDrive\Desktop\AppointmentManagement\obj\Debug\net8.0\ref\AppointmentManagement.dll
 C:\Users\alexg\OneDrive\Desktop\AppointmentManagement\obj\Debug\net8.0\AppointmentManagement.sourcelink.json
+C:\Users\alexg\OneDrive\Desktop\AppointmentManagement\bin\Debug\net8.0\SharedDTO.dll
+C:\Users\alexg\OneDrive\Desktop\AppointmentManagement\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\alexg\OneDrive\Desktop\AppointmentManagement\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\alexg\OneDrive\Desktop\AppointmentManagement\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\alexg\OneDrive\Desktop\AppointmentManagement\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\alexg\OneDrive\Desktop\AppointmentManagement\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\alexg\OneDrive\Desktop\AppointmentManagement\bin\Debug\net8.0\Microsoft.Extensions.Options.dll

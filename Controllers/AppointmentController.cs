@@ -17,9 +17,9 @@ namespace AppointmentManagement.Controllers
 
         // Get all appointments for a specific clinic within a date range
         [HttpGet("clinic/{clinicId}")]
-        public async Task<ActionResult<IEnumerable<ReadAppointmentDto>>> GetAppointmentByClinicId(Guid clinicId, DateTime startDate, DateTime endDate)
+        public async Task<ActionResult<IEnumerable<ReadAppointmentDto>>> GetAppointmentsByClinicId(Guid clinicId, DateTime startDate, DateTime endDate)
         {
-            var appointments = await _appointmentService.GetAppointmentByClinicId(clinicId, startDate, endDate);
+            var appointments = await _appointmentService.GetAppointmentsByClinicId(clinicId, startDate, endDate);
             return Ok(appointments);
         }
 
@@ -73,9 +73,9 @@ namespace AppointmentManagement.Controllers
 
         // Get all appointments by Patient ID within a date range
         [HttpGet("patient/{patientId}")]
-        public async Task<ActionResult<IEnumerable<ReadAppointmentDto>>> GetAppointmentByPatientId(string patientId, DateTime from, DateTime to)
+        public async Task<ActionResult<IEnumerable<ReadAppointmentDto>>> GetAppointmentsByPatientId(string patientId, DateTime from, DateTime to)
         {
-            var appointments = await _appointmentService.GetAppointmentByPatientId(patientId, from, to);
+            var appointments = await _appointmentService.GetAppointmentsByPatientId(patientId, from, to);
             return Ok(appointments);
         }
     }
