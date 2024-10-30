@@ -9,20 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="092bd0fb-1cac-4791-9ce1-eb1a1a411db7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Profiles/AppointmentTypeProfile.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Profiles/AvailabilityProfile.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Profiles/UnavailabilityProfile.cs" afterDir="false" />
+    <list default="true" id="092bd0fb-1cac-4791-9ce1-eb1a1a411db7" name="Changes" comment="Seventh Commit">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AppointmentManagement/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AppointmentManagement/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AppointmentManagement/.idea/dataSources/8f31174f-34b9-418b-9fc4-4f54c8744cad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AppointmentManagement/.idea/dataSources/8f31174f-34b9-418b-9fc4-4f54c8744cad.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AppointmentManagement/.idea/dataSources/8f31174f-34b9-418b-9fc4-4f54c8744cad/storage_v2/_src_/database/appointments_db.6SvmoA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AppointmentManagement/.idea/dataSources/8f31174f-34b9-418b-9fc4-4f54c8744cad/storage_v2/_src_/database/appointments_db.6SvmoA/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AppointmentManagement/.idea/dataSources/8f31174f-34b9-418b-9fc4-4f54c8744cad/storage_v2/_src_/database/appointments_db.6SvmoA/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AppointmentManagement/.idea/dataSources/8f31174f-34b9-418b-9fc4-4f54c8744cad/storage_v2/_src_/database/appointments_db.6SvmoA/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AppointmentManagement/.idea/dataSources/8f31174f-34b9-418b-9fc4-4f54c8744cad/storage_v2/_src_/database/appointments_db.6SvmoA/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AppointmentManagement/.idea/dataSources/8f31174f-34b9-418b-9fc4-4f54c8744cad/storage_v2/_src_/database/appointments_db.6SvmoA/schema/public.abK9xQ.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AppointmentManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AppointmentManagement/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/AppointmentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/AppointmentController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Profiles/AppointmentProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Profiles/AppointmentProfile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/AppointmentManagement.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/AppointmentManagement.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,18 +31,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Ar4gornn"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Ar4gornn&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:Ar4gornn/AppointementManagement.git",
-    "accountId": "122cedf6-d63c-4b62-9340-555aa42bdd66"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:Ar4gornn/AppointementManagement.git&quot;,
+    &quot;accountId&quot;: &quot;122cedf6-d63c-4b62-9340-555aa42bdd66&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/24372012c6c94138bf3f496e104366ffc8f918/7c/97ea2072/Object.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/alexg/OneDrive/Desktop/AppointmentManagement/Data/AppDbContext.cs" root0="SKIP_HIGHLIGHTING" />
@@ -79,7 +75,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
+    "settings.editor.selected.configurable": "com.github.copilot.settings.ApplicationConfigurable",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -158,6 +154,7 @@
       <workItem from="1729884317880" duration="625000" />
       <workItem from="1730204164009" duration="290000" />
       <workItem from="1730204578122" duration="14276000" />
+      <workItem from="1730290967175" duration="1039000" />
     </task>
     <task id="LOCAL-00001" summary="Innitial Commit">
       <option name="closed" value="true" />
@@ -223,7 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730219996418</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Seventh Commit">
+      <option name="closed" value="true" />
+      <created>1730291231200</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1730291231200</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,6 +263,11 @@
     <MESSAGE value="Fifth Commit Repositories" />
     <MESSAGE value="Fifth Commit Repositorie" />
     <MESSAGE value="Sixth Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sixth Commit" />
+    <MESSAGE value="Seventh Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Seventh Commit" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
