@@ -3,14 +3,9 @@ using AppointmentManagement.Models;
 using AppointmentManagement.DTO;
 
 namespace AppointmentManagement.Services;
-public class UnavailabilityService : IUnavailabilityService
+public class UnavailabilityService(IUnavailabilityRepository unavailabilityRepo) : IUnavailabilityService
 {
-    private readonly IUnavailabilityRepository _unavailabilityRepo;
-
-    public UnavailabilityService(IUnavailabilityRepository unavailabilityRepo)
-    {
-        _unavailabilityRepo = unavailabilityRepo;
-    }
+    private readonly IUnavailabilityRepository _unavailabilityRepo = unavailabilityRepo;
 
     public async Task<IEnumerable<UnavailabilityDto>> GetUnavailabilityByClinicId(Guid clinicId)
     {

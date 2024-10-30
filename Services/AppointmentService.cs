@@ -72,9 +72,9 @@ namespace AppointmentManagement.Services
             await _appointmentRepository.UpdateAppointment(appointment);
         }
 
-        public async Task<IEnumerable<ReadAppointmentDto>> GetAppointmentByPatientID(string patientId)
+        public async Task<IEnumerable<ReadAppointmentDto>> GetAppointmentByPatientId(string patientId)
         {
-            var appointments = await _appointmentRepository.GetAppointmentByPatientID(patientId);
+            var appointments = await _appointmentRepository.GetAppointmentByPatientId(patientId);
             return _mapper.Map<IEnumerable<ReadAppointmentDto>>(appointments);
         }
     }

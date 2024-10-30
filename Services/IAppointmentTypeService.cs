@@ -1,5 +1,7 @@
 using AppointmentManagement.DTO;
 
+
+namespace AppointmentManagement.Services;
 public interface IAppointmentTypeService
 {
     Task<IEnumerable<AppointmentTypeDto>> GetAllAppointmentTypes();

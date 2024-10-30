@@ -1,46 +1,54 @@
 using AppointmentManagement.Data;
 using AppointmentManagement.Models;
 using Microsoft.EntityFrameworkCore;
-public class AppointmentRepository : IAppointmentRepository
+
+namespace AppointmentManagement.Repositories
 {
-    private readonly AppDbContext _context;
-
-    public AppointmentRepository(AppDbContext context)
+    public class Appointment
     {
-        _context = context;
     }
 
-    public async Task<IEnumerable<Appointment>> GetAllAppointments()
+    public class AppointmentRepository : IAppointmentRepository
     {
-        return await _context.Appointments.ToListAsync();
-    }
+        private readonly AppDbContext _context;
 
-    public async Task<Appointment> GetAppointmentById(Guid id)
-    {
-        return await _context.Appointments.FindAsync(id);
-    }
+        public AppointmentRepository(AppDbContext context)
+        {
+            _context = context;
+        }
 
-    public async Task<Appointment> AddAppointment(Appointment appointment)
-    {
-        _context.Appointments.Add(appointment);
-        await _context.SaveChangesAsync();
-        return appointment;
-    }
+        public async Task<IEnumerable<Models.Appointment>> GetAllAppointments()
+        {
+            return await _context.Appointments.ToListAsync();
+        }
 
-    public async Task<Appointment> UpdateAppointment(Appointment appointment)
-    {
-        _context.Appointments.Update(appointment);
-        await _context.SaveChangesAsync();
-        return appointment;
-    }
+        public async Task<Models.Appointment> GetAppointmentById(Guid id)
+        {
+            return await _context.Appointments.FindAsync(id);
+        }
 
-    public async Task<bool> DeleteAppointment(Guid id)
-    {
-        var appointment = await _context.Appointments.FindAsync(id);
-        if (appointment == null) return false;
+        public async Task<Models.Appointment> AddAppointment(Models.Appointment appointment)
+        {
+            _context.Appointments.Add(appointment);
+            await _context.SaveChangesAsync();
+            return appointment;
+        }
 
-        _context.Appointments.Remove(appointment);
-        await _context.SaveChangesAsync();
-        return true;
+        public async Task<Models.Appointment> UpdateAppointment(Models.Appointment appointment)
+        {
+            _context.Appointments.Update(appointment);
+            await _context.SaveChangesAsync();
+            return appointment;
+        }
+
+        public async Task<bool> DeleteAppointment(Guid id)
+        {
+            var appointment = await _context.Appointments.FindAsync(id);
+            if (appointment == null) return false;
+
+            _context.Appointments.Remove(appointment);
+            await _context.SaveChangesAsync();
+            return true;
+        }
     }
 }

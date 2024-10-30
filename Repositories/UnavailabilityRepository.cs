@@ -4,14 +4,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AppointmentManagement.Repositories;
 
-public class UnavailabilityRepository : IUnavailabilityRepository
+public class UnavailabilityRepository(AppDbContext context) : IUnavailabilityRepository
 {
-    private readonly AppDbContext _context;
-
-    public UnavailabilityRepository(AppDbContext context)
-    {
-        _context = context;
-    }
+    private readonly AppDbContext _context = context;
 
     public async Task<IEnumerable<Unavailability>> GetUnavailabilityByClinicId(Guid clinicId)
     {

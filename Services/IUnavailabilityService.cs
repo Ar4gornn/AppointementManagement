@@ -1,4 +1,5 @@
 using AppointmentManagement.DTO;
+namespace AppointmentManagement.Services;
 
 public interface IUnavailabilityService
 {

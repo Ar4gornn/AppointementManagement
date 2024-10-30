@@ -3,14 +3,10 @@ using AppointmentManagement.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace AppointmentManagement.Repositories;
-public class AppointmentTypeRepository : IAppointmentTypeRepository
-{
-    private readonly AppDbContext _context;
 
-    public AppointmentTypeRepository(AppDbContext context)
-    {
-        _context = context;
-    }
+public class AppointmentTypeRepository(AppDbContext context) : IAppointmentTypeRepository
+{
+    private readonly AppDbContext _context = context;
 
     public async Task<IEnumerable<AppointmentType>> GetAllAppointmentTypes()
     {

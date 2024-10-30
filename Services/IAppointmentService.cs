@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using AppointmentManagement.DTO;
 
 namespace AppointmentManagement.Services
@@ -14,6 +11,6 @@ namespace AppointmentManagement.Services
         Task<ReadAppointmentDto> UpdateAppointment(Guid appointmentId, UpdateAppointmentDto updateAppointmentDto);
         Task ApproveAppointment(Guid appointmentId, bool isApproved);
         Task SetAppointmentShowedUp(Guid appointmentId, bool showedUp);
-        Task<IEnumerable<ReadAppointmentDto>> GetAppointmentByPatientID(string patientId);
+        Task<IEnumerable<ReadAppointmentDto>> GetAppointmentByPatientId(string patientId);
     }
 }

@@ -1,20 +1,49 @@
+using AppointmentManagement.DTO;
 using AppointmentManagement.Repositories;
 using AppointmentManagement.Models;
-using AppointmentManagement.DTO;
 
 namespace AppointmentManagement.Services;
 public class AvailabilityService : IAvailabilityService
 {
-    private readonly IAvailabilityRepository _availabilityRepo;
+    private readonly IAvailabilityRepository _availabilityRepository;
 
-    public AvailabilityService(IAvailabilityRepository availabilityRepo)
+    public AvailabilityService(IAvailabilityRepository availabilityRepository)
     {
-        _availabilityRepo = availabilityRepo;
+        _availabilityRepository = availabilityRepository;
     }
 
-    public async Task<IEnumerable<AvailabilityDto>> GetAvailabilityByClinicId(Guid clinicId)
+    // Get unavailabilities for a specific clinic within a date range
+    public async Task<IEnumerable<UnavailabilityDto>> GetClinicUnavailabilities(Guid clinicId, DateTime startDate, DateTime endDate)
     {
-        var availabilities = await _availabilityRepo.GetAvailabilityByClinicId(clinicId);
+        var unavailabilities = await _availabilityRepository.GetClinicUnavailabilities(clinicId, startDate, endDate);
+        return unavailabilities.Select(u => new UnavailabilityDto
+        {
+            Id = u.Id,
+            ClinicId = u.ClinicId,
+            StartTime = u.StartTime,
+            EndTime = u.EndTime,
+            IsAllDay = u.IsAllDay
+        }).ToList();
+    }
+
+    // Create availability records
+    public async Task CreateAvailabilities(Guid clinicId, List<CreateAvailabilityDto> availabilities)
+    {
+        var availabilityEntities = availabilities.Select(a => new Availability
+        {
+            ClinicId = clinicId,
+            DayOfWeek = a.DayOfWeek,
+            StartTime = a.StartTime,
+            EndTime = a.EndTime
+        }).ToList();
+
+        await _availabilityRepository.CreateAvailabilities(availabilityEntities);
+    }
+
+    // Get all availabilities for a clinic
+    public async Task<IEnumerable<AvailabilityDto>> GetClinicAvailabilities(Guid clinicId)
+    {
+        var availabilities = await _availabilityRepository.GetClinicAvailabilities(clinicId);
         return availabilities.Select(a => new AvailabilityDto
         {
             Id = a.Id,
@@ -22,34 +51,12 @@ public class AvailabilityService : IAvailabilityService
             DayOfWeek = a.DayOfWeek,
             StartTime = a.StartTime,
             EndTime = a.EndTime
-        });
+        }).ToList();
     }
 
-    public async Task<AvailabilityDto> CreateAvailability(CreateAvailabilityDto dto)
+    // Remove an availability by ID
+    public async Task<bool> RemoveAvailability(Guid id)
     {
-        var availability = new Availability
-        {
-            Id = Guid.NewGuid(),
-            ClinicId = dto.ClinicId,
-            DayOfWeek = dto.DayOfWeek,
-            StartTime = dto.StartTime,
-            EndTime = dto.EndTime
-        };
-
-        await _availabilityRepo.AddAvailability(availability);
-
-        return new AvailabilityDto
-        {
-            Id = availability.Id,
-            ClinicId = availability.ClinicId,
-            DayOfWeek = availability.DayOfWeek,
-            StartTime = availability.StartTime,
-            EndTime = availability.EndTime
-        };
-    }
-
-    public async Task<bool> DeleteAvailability(Guid id)
-    {
-        return await _availabilityRepo.DeleteAvailability(id);
+        return await _availabilityRepository.RemoveAvailability(id);
     }
 }

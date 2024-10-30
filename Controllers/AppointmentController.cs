@@ -1,8 +1,10 @@
+using Microsoft.AspNetCore.Mvc;
+using AppointmentManagement.DTO;
+using AppointmentManagement.Services;
+
 namespace AppointmentManagement.Controllers
 {
-    using Microsoft.AspNetCore.Mvc;
-    using AppointmentManagement.DTO;
-    using AppointmentManagement.Services;
+
 
     [ApiController]
     [Route("api/[controller]")]

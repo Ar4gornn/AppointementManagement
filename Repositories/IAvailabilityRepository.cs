@@ -4,7 +4,8 @@ namespace AppointmentManagement.Repositories;
 
 public interface IAvailabilityRepository
 {
-    Task<IEnumerable<Availability>> GetAvailabilityByClinicId(Guid clinicId);
-    Task<Availability> AddAvailability(Availability availability);
-    Task<bool> DeleteAvailability(Guid id);
+    Task<IEnumerable<Unavailability>> GetClinicUnavailabilities(Guid clinicId, DateTime startDate, DateTime endDate);
+    Task CreateAvailabilities(List<Availability> availabilities);
+    Task<IEnumerable<Availability>> GetClinicAvailabilities(Guid clinicId);
+    Task<bool> RemoveAvailability(Guid id);
 }

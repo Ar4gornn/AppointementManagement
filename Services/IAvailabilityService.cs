@@ -1,8 +1,10 @@
 using AppointmentManagement.DTO;
 
+namespace AppointmentManagement.Services;
 public interface IAvailabilityService
 {
-    Task<IEnumerable<AvailabilityDto>> GetAvailabilityByClinicId(Guid clinicId);
-    Task<AvailabilityDto> CreateAvailability(CreateAvailabilityDto dto);
-    Task<bool> DeleteAvailability(Guid id);
+    Task<IEnumerable<UnavailabilityDto>> GetClinicUnavailabilities(Guid clinicId, DateTime startDate, DateTime endDate);
+    Task CreateAvailabilities(Guid clinicId, List<CreateAvailabilityDto> availabilities);
+    Task<IEnumerable<AvailabilityDto>> GetClinicAvailabilities(Guid clinicId);
+    Task<bool> RemoveAvailability(Guid id);
 }
