@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using AppointmentManagement.DTO;
 using AppointmentManagement.Services;
 
-
 [ApiController]
 [Route("api/[controller]")]
 public class AppointmentController : ControllerBase

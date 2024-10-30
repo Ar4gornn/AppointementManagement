@@ -9,26 +9,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="092bd0fb-1cac-4791-9ce1-eb1a1a411db7" name="Changes" comment="Fifth Commit Repositorie">
-      <change afterPath="$PROJECT_DIR$/Models/AppointmentType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/Clinic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/AvailabilityController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/AvailabilityController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Availability.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Availability.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repositories/AppointmentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/AppointmentRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repositories/AppointmentTypeRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/AppointmentTypeRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repositories/AvailabilityRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/AvailabilityRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repositories/IAppointmentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/IAppointmentRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repositories/IAppointmentTypeRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/IAppointmentTypeRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repositories/IAvailabilityRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/IAvailabilityRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repositories/IUnavailabilityRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/IUnavailabilityRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repositories/UnavailabilityRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/UnavailabilityRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/AppointmentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/AppointmentService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/AppointmentTypeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/AppointmentTypeService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/AvailabilityService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/AvailabilityService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/IAppointmentTypeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/IAppointmentTypeService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/IAvailabilityService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/IAvailabilityService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/IUnavailabilityService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/IUnavailabilityService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/UnavailabilityService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/UnavailabilityService.cs" afterDir="false" />
+    <list default="true" id="092bd0fb-1cac-4791-9ce1-eb1a1a411db7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Profiles/AppointmentTypeProfile.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Profiles/AvailabilityProfile.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Profiles/UnavailabilityProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AppointmentManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AppointmentManagement/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/AppointmentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/AppointmentController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Profiles/AppointmentProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Profiles/AppointmentProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/AppointmentManagement.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/AppointmentManagement.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +157,7 @@
       <workItem from="1729172169179" duration="6488000" />
       <workItem from="1729884317880" duration="625000" />
       <workItem from="1730204164009" duration="290000" />
-      <workItem from="1730204578122" duration="13601000" />
+      <workItem from="1730204578122" duration="14276000" />
     </task>
     <task id="LOCAL-00001" summary="Innitial Commit">
       <option name="closed" value="true" />
@@ -213,7 +207,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730218039004</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Sixth Commit">
+      <option name="closed" value="true" />
+      <created>1730219965693</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1730219965693</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Sixth Commit">
+      <option name="closed" value="true" />
+      <created>1730219996418</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1730219996418</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,6 +257,7 @@
     <MESSAGE value="Fourth Commit DTOs" />
     <MESSAGE value="Fifth Commit Repositories" />
     <MESSAGE value="Fifth Commit Repositorie" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fifth Commit Repositorie" />
+    <MESSAGE value="Sixth Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sixth Commit" />
   </component>
 </project>

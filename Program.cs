@@ -1,16 +1,21 @@
 using Microsoft.EntityFrameworkCore;
-using AppointmentManagement.Data; // Import your DbContext
+using AppointmentManagement.Data;
+using AutoMapper;
+using AppointmentManagement.Profiles;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
 
-// Add PostgreSQL connection
+// Add PostgresSQL connection
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+// Add AutoMapper and register profiles
+builder.Services.AddAutoMapper(typeof(AppointmentProfile), typeof(AvailabilityProfile), typeof(UnavailabilityProfile), typeof(AppointmentTypeProfile));
+
+// Swagger/OpenAPI configuration
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
