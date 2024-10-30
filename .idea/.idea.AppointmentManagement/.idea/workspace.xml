@@ -9,25 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="092bd0fb-1cac-4791-9ce1-eb1a1a411db7" name="Changes" comment="13 Commit">
+    <list default="true" id="092bd0fb-1cac-4791-9ce1-eb1a1a411db7" name="Changes" comment="13 commit">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AppointmentManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AppointmentManagement/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DTO/CreateUnavailabilityDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DTO/CreateUnavailabilityDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DTO/ReadAppointmentDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DTO/ReadAppointmentDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DTO/UnavailabilityDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DTO/UnavailabilityDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DTO/UpdateAppointmentDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DTO/UpdateAppointmentDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/DataSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/DataSeeder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Appointment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Appointment.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/AppointmentType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/AppointmentType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Availability.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Availability.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Clinic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Clinic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Unavailability.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Unavailability.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repositories/AppointmentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/AppointmentRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repositories/AvailabilityRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/AvailabilityRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/UnavailabilityService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/UnavailabilityService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.sourcelink.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +44,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/24372012c6c94138bf3f496e104366ffc8f918/7c/97ea2072/Object.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/alexg/OneDrive/Desktop/AppointmentManagement/Controllers/AppointmentController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Data/DataSeeder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/alexg/OneDrive/Desktop/AppointmentManagement/Models/Appointment.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -167,7 +153,7 @@
       <workItem from="1729884317880" duration="625000" />
       <workItem from="1730204164009" duration="290000" />
       <workItem from="1730204578122" duration="14276000" />
-      <workItem from="1730290967175" duration="16050000" />
+      <workItem from="1730290967175" duration="16690000" />
     </task>
     <task id="LOCAL-00001" summary="Innitial Commit">
       <option name="closed" value="true" />
@@ -289,7 +275,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730304398745</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="13 commit">
+      <option name="closed" value="true" />
+      <created>1730307420251</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1730307420251</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,7 +325,8 @@
     <MESSAGE value="11 Commit" />
     <MESSAGE value="12 Commit" />
     <MESSAGE value="13 Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="13 Commit" />
+    <MESSAGE value="13 commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="13 commit" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,12 +1,16 @@
 using AppointmentManagement.Repositories;
 using AppointmentManagement.Models;
 using AppointmentManagement.DTO;
-using System;
 
 namespace AppointmentManagement.Services;
-public class UnavailabilityService(IUnavailabilityRepository unavailabilityRepo) : IUnavailabilityService
+public class UnavailabilityService : IUnavailabilityService
 {
-    private readonly IUnavailabilityRepository _unavailabilityRepo = unavailabilityRepo;
+    private readonly IUnavailabilityRepository _unavailabilityRepo;
+
+    public UnavailabilityService(IUnavailabilityRepository unavailabilityRepo)
+    {
+        _unavailabilityRepo = unavailabilityRepo;
+    }
 
     public async Task<IEnumerable<UnavailabilityDto>> GetUnavailabilityByClinicId(Guid clinicId)
     {
@@ -15,8 +19,8 @@ public class UnavailabilityService(IUnavailabilityRepository unavailabilityRepo)
         {
             Id = u.Id,
             ClinicId = u.ClinicId,
-            StartTime = u.StartTime,
-            EndTime = u.EndTime,
+            StartDateTime = u.Date.Add(u.StartTime),  // Combine Date + TimeSpan
+            EndDateTime = u.Date.Add(u.EndTime),      // Combine Date + TimeSpan
             IsAllDay = u.IsAllDay
         }).ToList();
     }
@@ -27,8 +31,9 @@ public class UnavailabilityService(IUnavailabilityRepository unavailabilityRepo)
         {
             Id = Guid.NewGuid(),
             ClinicId = dto.ClinicId,
-            StartTime = dto.StartTime,
-            EndTime = dto.EndTime,
+            Date = dto.StartDateTime.Date,  // Extract Date part from DateTime
+            StartTime = dto.StartDateTime.TimeOfDay,  // Extract Time part from DateTime
+            EndTime = dto.EndDateTime.TimeOfDay,      // Extract Time part from DateTime
             IsAllDay = dto.IsAllDay
         };
 
@@ -38,8 +43,8 @@ public class UnavailabilityService(IUnavailabilityRepository unavailabilityRepo)
         {
             Id = unavailability.Id,
             ClinicId = unavailability.ClinicId,
-            StartTime = unavailability.StartTime,
-            EndTime = unavailability.EndTime,
+            StartDateTime = unavailability.Date.Add(unavailability.StartTime),  // Combine Date + TimeSpan
+            EndDateTime = unavailability.Date.Add(unavailability.EndTime),      // Combine Date + TimeSpan
             IsAllDay = unavailability.IsAllDay
         };
     }
