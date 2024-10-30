@@ -1,86 +1,82 @@
-namespace AppointmentManagement.Controllers;
-using Microsoft.AspNetCore.Mvc;
-using AppointmentManagement.DTO;
-using AppointmentManagement.Services;
-
-[ApiController]
-[Route("api/[controller]")]
-public class AppointmentController : ControllerBase
+namespace AppointmentManagement.Controllers
 {
-    private readonly IAppointmentService _appointmentService;
+    using Microsoft.AspNetCore.Mvc;
+    using AppointmentManagement.DTO;
+    using AppointmentManagement.Services;
 
-    public AppointmentController(IAppointmentService appointmentService)
+    [ApiController]
+    [Route("api/[controller]")]
+    public class AppointmentController : ControllerBase
     {
-        _appointmentService = appointmentService;
-    }
+        private readonly IAppointmentService _appointmentService;
 
-    // Get all appointments for a specific clinic within a date range
-    [HttpGet("clinic/{clinicId}")]
-    public async Task<ActionResult<IEnumerable<ReadAppointmentDto>>> GetAppointmentByClinicId(Guid clinicId,
-        DateTime startDate, DateTime endDate)
-    {
-        var appointments = await _appointmentService.GetAppointmentByClinicId(clinicId, startDate, endDate);
-        return Ok(appointments);
-    }
+        public AppointmentController(IAppointmentService appointmentService)
+        {
+            _appointmentService = appointmentService;
+        }
 
-    // Create a new appointment
-    [HttpPost]
-    public async Task<ActionResult<ReadAppointmentDto>> CreateAppointment(
-        [FromBody] CreateAppointmentDto createAppointmentDto)
-    {
-        var createdAppointment = await _appointmentService.CreateAppointment(createAppointmentDto);
-        return CreatedAtAction(nameof(GetAppointmentByClinicId), new { clinicId = createdAppointment.ClinicId },
-            createdAppointment);
-    }
+        // Get all appointments for a specific clinic within a date range
+        [HttpGet("clinic/{clinicId}")]
+        public async Task<ActionResult<IEnumerable<ReadAppointmentDto>>> GetAppointmentByClinicId(Guid clinicId, DateTime startDate, DateTime endDate)
+        {
+            var appointments = await _appointmentService.GetAppointmentByClinicId(clinicId, startDate, endDate);
+            return Ok(appointments);
+        }
 
-    // Reschedule an existing appointment
-    [HttpPut("reschedule/{appointmentId}")]
-    public async Task<ActionResult<ReadAppointmentDto>> RescheduleAppointment(Guid appointmentId, DateTime startAt,
-        DateTime endAt)
-    {
-        var updatedAppointment = await _appointmentService.RescheduleAppointment(appointmentId, startAt, endAt);
-        return Ok(updatedAppointment);
-    }
+        // Create a new appointment
+        [HttpPost]
+        public async Task<ActionResult<ReadAppointmentDto>> CreateAppointment(CreateAppointmentDto dto)
+        {
+            var appointment = await _appointmentService.CreateAppointment(dto);
+            return Ok(appointment);
+        }
 
-    // Delete an appointment by ID
-    //[HttpDelete("{appointmentId}")]
-    //public async Task<IActionResult> DeleteAppointment(Guid appointmentId)
-    //{
-    //    await _appointmentService.DeleteAppointment(appointmentId);
-    //    return NoContent();
-    //}
+        // Reschedule an existing appointment
+        [HttpPut("{appointmentId}/reschedule")]
+        public async Task<ActionResult<ReadAppointmentDto>> RescheduleAppointment(Guid appointmentId, DateTime startAt, DateTime endAt)
+        {
+            var appointment = await _appointmentService.RescheduleAppointment(appointmentId, startAt, endAt);
+            return Ok(appointment);
+        }
 
-    // Update an existing appointment
-    [HttpPut("{appointmentId}")]
-    public async Task<ActionResult<ReadAppointmentDto>> UpdateAppointment(Guid appointmentId,
-        [FromBody] UpdateAppointmentDto updateAppointmentDto)
-    {
-        var updatedAppointment = await _appointmentService.UpdateAppointment(appointmentId, updateAppointmentDto);
-        return Ok(updatedAppointment);
-    }
+        // Delete an appointment by ID
+        [HttpDelete("{appointmentId}")]
+        public async Task<IActionResult> DeleteAppointment(Guid appointmentId)
+        {
+            await _appointmentService.DeleteAppointment(appointmentId);
+            return NoContent();
+        }
 
-    // Approve an appointment
-    [HttpPut("approve/{appointmentId}")]
-    public async Task<IActionResult> ApproveAppointment(Guid appointmentId, bool isApproved)
-    {
-        await _appointmentService.ApproveAppointment(appointmentId, isApproved);
-        return NoContent();
-    }
+        // Update an existing appointment
+        [HttpPut("{appointmentId}")]
+        public async Task<ActionResult<ReadAppointmentDto>> UpdateAppointment(Guid appointmentId, UpdateAppointmentDto dto)
+        {
+            var appointment = await _appointmentService.UpdateAppointment(appointmentId, dto);
+            return Ok(appointment);
+        }
 
-    // Set appointment as "showed up"
-    [HttpPut("showedUp/{appointmentId}")]
-    public async Task<IActionResult> SetAppointmentShowedUp(Guid appointmentId, bool showedUp)
-    {
-        await _appointmentService.SetAppointmentShowedUp(appointmentId, showedUp);
-        return NoContent();
-    }
+        // Approve an appointment
+        [HttpPut("{appointmentId}/approve")]
+        public async Task<ActionResult<ReadAppointmentDto>> ApproveAppointment(Guid appointmentId, bool isApproved)
+        {
+            var appointment = await _appointmentService.ApproveAppointment(appointmentId, isApproved);
+            return Ok(appointment);
+        }
 
-    // Get all appointments by Patient ID
-    [HttpGet()]
-    public async Task<ActionResult<IEnumerable<ReadAppointmentDto>>> GetAppointmentByPatientID(string patientId,
-        DateTime from, DateTime to)
-    {
-        var appointments = await _appointmentService.GetAppointmentByPatientID(patientId, from, to);
-        return Ok(appointments);
+        // Set appointment as "showed up"
+        [HttpPut("{appointmentId}/showed-up")]
+        public async Task<ActionResult<ReadAppointmentDto>> SetAppointmentShowedUp(Guid appointmentId, bool showedUp)
+        {
+            var appointment = await _appointmentService.SetAppointmentShowedUp(appointmentId, showedUp);
+            return Ok(appointment);
+        }
+
+        // Get all appointments by Patient ID within a date range
+        [HttpGet("patient/{patientId}")]
+        public async Task<ActionResult<IEnumerable<ReadAppointmentDto>>> GetAppointmentByPatientID(string patientId, DateTime from, DateTime to)
+        {
+            var appointments = await _appointmentService.GetAppointmentByPatientID(patientId, from, to);
+            return Ok(appointments);
+        }
     }
 }

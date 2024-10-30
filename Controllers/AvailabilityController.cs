@@ -1,7 +1,7 @@
 namespace AppointmentManagement.Controllers;
 using Microsoft.AspNetCore.Mvc;
-using AppointmentManagement.Services;
 using AppointmentManagement.DTO;
+using AppointmentManagement.Services;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -15,30 +15,23 @@ public class AvailabilityController : ControllerBase
     }
 
     // Get unavailabilities for a specific clinic within a date range
-    [HttpGet("clinic/{clinicId}/unavailabilities")]
+    [HttpGet("unavailabilities")]
     public async Task<ActionResult<IEnumerable<UnavailabilityDto>>> GetClinicUnavailabilities(Guid clinicId, DateTime startDate, DateTime endDate)
     {
-        try
-        {
-            var unavailabilities = await _availabilityService.GetClinicUnavailabilities(clinicId, startDate, endDate);
-            return Ok(unavailabilities);
-        }
-        catch (Exception ex)
-        {
-            return BadRequest("Something went wrong");
-        }
+        var unavailabilities = await _availabilityService.GetClinicUnavailabilities(clinicId, startDate, endDate);
+        return Ok(unavailabilities);
     }
 
     // Create availability records
-    [HttpPost]
-    public async Task<IActionResult> CreateAvailabilities(Guid clinicId, [FromBody] List<AvailabilityDto> availabilityDtos)
+    [HttpPost("availabilities")]
+    public async Task<IActionResult> CreateAvailablities(Guid clinicId, List<CreateAvailabilityDto> availabilities)
     {
-        await _availabilityService.CreateAvailabilities(clinicId, availabilityDtos);
-        return StatusCode(201); // HTTP 201 Created
+        await _availabilityService.CreateAvailablities(clinicId, availabilities);
+        return StatusCode(201);
     }
 
     // Get all availabilities for a clinic
-    [HttpGet("clinic/{clinicId}")]
+    [HttpGet("availabilities/{clinicId}")]
     public async Task<ActionResult<IEnumerable<AvailabilityDto>>> GetClinicAvailabilities(Guid clinicId)
     {
         var availabilities = await _availabilityService.GetClinicAvailabilities(clinicId);
@@ -46,10 +39,12 @@ public class AvailabilityController : ControllerBase
     }
 
     // Remove an availability by ID
-    [HttpDelete("{id}")]
+    [HttpDelete("availabilities/{id}")]
     public async Task<IActionResult> RemoveAvailability(Guid id)
     {
-        await _availabilityService.RemoveAvailability(id);
+        var removed = await _availabilityService.RemoveAvailability(id);
+        if (!removed)
+            return NotFound();
         return NoContent();
     }
 }
