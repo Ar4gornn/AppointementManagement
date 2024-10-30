@@ -11,5 +11,6 @@ namespace AppointmentManagement.Data
         public DbSet<Availability> Availabilities { get; set; }
         public DbSet<Unavailability> Unavailabilities { get; set; }
         public DbSet<AppointmentType> AppointmentTypes { get; set; }
+        public DbSet<Clinic> Clinics { get; set; }
     }
 }

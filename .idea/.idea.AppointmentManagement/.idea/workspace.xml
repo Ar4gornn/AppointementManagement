@@ -9,25 +9,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="092bd0fb-1cac-4791-9ce1-eb1a1a411db7" name="Changes" comment="11 Commit">
+    <list default="true" id="092bd0fb-1cac-4791-9ce1-eb1a1a411db7" name="Changes" comment="12 Commit">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AppointmentManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AppointmentManagement/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/AppointmentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/AppointmentController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repositories/AppointmentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/AppointmentRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repositories/IAppointmentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/IAppointmentRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/AppointmentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/AppointmentService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/IAppointmentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/IAppointmentService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppointmentManagement.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AppointmentManagement.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/AppDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/DataSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/DataSeeder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Appointment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Appointment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/AppointmentType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/AppointmentType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/AppointmentManagement.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/AppointmentManagement.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/AppointmentManagement.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/AppointmentManagement.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/AppointmentManagement.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/AppointmentManagement.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/AppointmentManagement.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/AppointmentManagement.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Relational.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Relational.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/Npgsql.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/Npgsql.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/AppointmentManagement.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/AppointmentManagement.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/AppointmentManagement.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/AppointmentManagement.csproj.nuget.g.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.pdb" afterDir="false" />
@@ -35,11 +34,19 @@
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/ref/AppointmentManagement.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/ref/AppointmentManagement.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/refint/AppointmentManagement.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/refint/AppointmentManagement.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DpaMonitoringSettings">
+    <option name="autoShow" value="false" />
   </component>
   <component name="ExportToHTMLSettings">
     <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../AppointmentManagement\exportToHTML" />
@@ -80,6 +87,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     ".NET Launch Settings Profile.AppointmentManagement: IIS Express.executor": "Run",
+    ".NET Launch Settings Profile.AppointmentManagement: http.executor": "Run",
+    ".NET Launch Settings Profile.AppointmentManagement: https.executor": "Run",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -168,7 +177,7 @@
       <workItem from="1729884317880" duration="625000" />
       <workItem from="1730204164009" duration="290000" />
       <workItem from="1730204578122" duration="14276000" />
-      <workItem from="1730290967175" duration="11018000" />
+      <workItem from="1730290967175" duration="13275000" />
     </task>
     <task id="LOCAL-00001" summary="Innitial Commit">
       <option name="closed" value="true" />
@@ -274,7 +283,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730300545516</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="12 Commit">
+      <option name="closed" value="true" />
+      <created>1730302312340</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1730302312340</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,7 +331,8 @@
     <MESSAGE value="Ninth Commit" />
     <MESSAGE value="10 commit" />
     <MESSAGE value="11 Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="11 Commit" />
+    <MESSAGE value="12 Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="12 Commit" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
