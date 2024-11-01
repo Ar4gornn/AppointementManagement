@@ -1,5 +1,4 @@
 using System;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AppointmentManagement.Models
@@ -16,13 +15,13 @@ namespace AppointmentManagement.Models
         [Column("day_of_week")]
         public int DayOfWeek { get; set; }
 
-        [Column("start_time")]
-        public TimeSpan StartTime { get; set; }
+        [Column("start_time", TypeName = "timestamp with time zone")]
+        public DateTime StartTime { get; set; }
 
-        [Column("end_time")]
-        public TimeSpan EndTime { get; set; }
+        [Column("end_time", TypeName = "timestamp with time zone")]
+        public DateTime EndTime { get; set; }
 
-        [Column("created_at")]
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;  // Add created_at with default current timestamp.
+        [Column("created_at", TypeName = "timestamp with time zone")]
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     }
 }

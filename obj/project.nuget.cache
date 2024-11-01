@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "LJd/+PXb6Yo=",
+  "dgSpecHash": "yZIyVdkphJU=",
   "success": true,
   "projectFilePath": "C:\\Users\\alexg\\OneDrive\\Desktop\\AppointmentManagement\\AppointmentManagement.csproj",
   "expectedPackageFiles": [
@@ -31,8 +31,11 @@
     "C:\\Users\\alexg\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
     "C:\\Users\\alexg\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\alexg\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\alexg\\.nuget\\packages\\nodatime\\3.2.0\\nodatime.3.2.0.nupkg.sha512",
     "C:\\Users\\alexg\\.nuget\\packages\\npgsql\\8.0.5\\npgsql.8.0.5.nupkg.sha512",
     "C:\\Users\\alexg\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\8.0.10\\npgsql.entityframeworkcore.postgresql.8.0.10.nupkg.sha512",
+    "C:\\Users\\alexg\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql.nodatime\\8.0.10\\npgsql.entityframeworkcore.postgresql.nodatime.8.0.10.nupkg.sha512",
+    "C:\\Users\\alexg\\.nuget\\packages\\npgsql.nodatime\\8.0.5\\npgsql.nodatime.8.0.5.nupkg.sha512",
     "C:\\Users\\alexg\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "C:\\Users\\alexg\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
     "C:\\Users\\alexg\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",

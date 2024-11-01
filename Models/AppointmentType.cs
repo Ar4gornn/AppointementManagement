@@ -10,14 +10,14 @@ namespace AppointmentManagement.Models
         [Column("id")]
         public Guid Id { get; set; }
 
-        [Column("name")]
-        [StringLength(100)] 
-        public string Name { get; set; }
-
         [Column("clinic_id")]
         public Guid ClinicId { get; set; }
 
-        [Column("created_at")]
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow; 
+        [Column("name")]
+        [StringLength(100)]
+        public string Name { get; set; }
+
+        [Column("created_at", TypeName = "timestamp with time zone")]
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     }
 }
