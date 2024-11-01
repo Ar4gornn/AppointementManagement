@@ -50,5 +50,8 @@ namespace AppointmentManagement.Models
 
         [Column("updated_at", TypeName = "timestamp with time zone")]
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+
+        [Column("showed_up")]
+        public bool ShowedUp { get; set; }
     }
 }

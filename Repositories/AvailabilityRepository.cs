@@ -16,7 +16,7 @@ public class AvailabilityRepository : IAvailabilityRepository
     public async Task<IEnumerable<Unavailability>> GetClinicUnavailabilities(Guid clinicId, DateTime startDate, DateTime endDate)
     {
         return await _context.Unavailabilities
-            .Where(u => u.ClinicId == clinicId && u.StartTime >= startDate && u.EndTime <= endDate)
+            .Where(u => u.ClinicId == clinicId && u.StartTime >= startDate.TimeOfDay && u.EndTime <= endDate.TimeOfDay)
             .ToListAsync<Unavailability>();
     }
 

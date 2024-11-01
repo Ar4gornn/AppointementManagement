@@ -20,8 +20,8 @@ public class AvailabilityService : IAvailabilityService
         {
             Id = u.Id,
             ClinicId = u.ClinicId,
-            StartTime = u.StartTime,
-            EndTime = u.EndTime,
+            StartTime = startDate.Date + u.StartTime, // Fixed
+            EndTime = startDate.Date + u.EndTime,     // Fixed
             IsAllDay = u.IsAllDay
         }).ToList();
     }
@@ -33,8 +33,8 @@ public class AvailabilityService : IAvailabilityService
         {
             ClinicId = clinicId,
             DayOfWeek = a.DayOfWeek,
-            StartTime = a.StartTime,
-            EndTime = a.EndTime
+            StartTime = new DateTime(a.StartTime.Ticks), // Fixed
+            EndTime = new DateTime(a.EndTime.Ticks)      // Fixed
         }).ToList();
 
         await _availabilityRepository.CreateAvailabilities(availabilityEntities);
@@ -49,8 +49,8 @@ public class AvailabilityService : IAvailabilityService
             Id = a.Id,
             ClinicId = a.ClinicId,
             DayOfWeek = a.DayOfWeek,
-            StartTime = a.StartTime,
-            EndTime = a.EndTime
+            StartTime = new TimeSpan(a.StartTime.Ticks), // Fixed
+            EndTime = new TimeSpan(a.EndTime.Ticks)      // Fixed
         }).ToList();
     }
 

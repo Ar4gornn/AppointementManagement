@@ -57,7 +57,6 @@ public class DataSeeder
                     Status = 1,
                     ClinicId = Guid.NewGuid(),
                     Notes = "First-time visit",
-                    ShowedUp = true,
                     BookingChannel = "Online"
                 },
                 new Appointment
@@ -71,7 +70,6 @@ public class DataSeeder
                     Status = 1,
                     ClinicId = Guid.NewGuid(),
                     Notes = "Follow-up for previous consultation",
-                    ShowedUp = false,
                     BookingChannel = "Phone"
                 }
             );
@@ -85,16 +83,16 @@ public class DataSeeder
                     Id = Guid.NewGuid(),
                     ClinicId = Guid.NewGuid(),
                     DayOfWeek = 1, // Monday
-                    StartTime = new TimeSpan(9, 0, 0),
-                    EndTime = new TimeSpan(17, 0, 0)
+                    StartTime = new DateTime(9, 0, 0),
+                    EndTime = new DateTime(17, 0, 0)
                 },
                 new Availability
                 {
                     Id = Guid.NewGuid(),
                     ClinicId = Guid.NewGuid(),
                     DayOfWeek = 2, // Tuesday
-                    StartTime = new TimeSpan(9, 0, 0),
-                    EndTime = new TimeSpan(17, 0, 0)
+                    StartTime = new DateTime(9, 0, 0),
+                    EndTime = new DateTime(17, 0, 0)
                 }
             );
         }
@@ -106,16 +104,18 @@ public class DataSeeder
                 {
                     Id = Guid.NewGuid(),
                     ClinicId = Guid.NewGuid(),
-                    StartTime = DateTime.UtcNow.AddHours(-1).TimeOfDay,
-                    EndTime = DateTime.UtcNow.AddHours(1).TimeOfDay,
+                    Date = DateTime.UtcNow.Date,
+                    StartTime = TimeSpan.FromHours(DateTime.UtcNow.AddHours(-1).Hour), // Changed to TimeSpan
+                    EndTime = TimeSpan.FromHours(DateTime.UtcNow.AddHours(1).Hour),    // Changed to TimeSpan
                     IsAllDay = false
                 },
                 new Unavailability
                 {
                     Id = Guid.NewGuid(),
                     ClinicId = Guid.NewGuid(),
-                    StartTime = DateTime.UtcNow.AddDays(2).TimeOfDay,
-                    EndTime = DateTime.UtcNow.AddDays(2).AddHours(3).TimeOfDay,
+                    Date = DateTime.UtcNow.AddDays(2).Date,
+                    StartTime = TimeSpan.FromHours(DateTime.UtcNow.AddDays(2).Hour),                // Changed to TimeSpan
+                    EndTime = TimeSpan.FromHours(DateTime.UtcNow.AddDays(2).AddHours(3).Hour),      // Changed to TimeSpan
                     IsAllDay = false
                 }
             );

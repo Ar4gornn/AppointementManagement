@@ -12,14 +12,14 @@ namespace AppointmentManagement.Models
         [Column("clinic_id")]
         public Guid ClinicId { get; set; }
 
-        [Column("date", TypeName = "timestamp with time zone")]
-        public DateTime Date { get; set; }
+        [Column("date")]
+        public DateTime Date { get; set; } // DateTime for date
 
-        [Column("start_time", TypeName = "timestamp with time zone")]
-        public DateTime StartTime { get; set; }
+        [Column("start_time")]
+        public TimeSpan StartTime { get; set; } // TimeSpan for time
 
-        [Column("end_time", TypeName = "timestamp with time zone")]
-        public DateTime EndTime { get; set; }
+        [Column("end_time")]
+        public TimeSpan EndTime { get; set; } // TimeSpan for time
 
         [Column("is_allday")]
         public bool IsAllDay { get; set; }

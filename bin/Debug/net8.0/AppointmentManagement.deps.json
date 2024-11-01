@@ -12,7 +12,9 @@
           "DTOs": "1.1.0",
           "Microsoft.EntityFrameworkCore": "8.0.10",
           "Microsoft.EntityFrameworkCore.Design": "8.0.10",
+          "NodaTime": "3.2.0",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.10",
+          "Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime": "8.0.10",
           "Swashbuckle.AspNetCore": "6.4.0"
         },
         "runtime": {
@@ -434,6 +436,14 @@
           }
         }
       },
+      "NodaTime/3.2.0": {
+        "runtime": {
+          "lib/net8.0/NodaTime.dll": {
+            "assemblyVersion": "3.2.0.0",
+            "fileVersion": "3.2.0.0"
+          }
+        }
+      },
       "Npgsql/8.0.5": {
         "dependencies": {
           "Microsoft.Extensions.Logging.Abstractions": "8.0.2"
@@ -456,6 +466,30 @@
           "lib/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
             "assemblyVersion": "8.0.10.0",
             "fileVersion": "8.0.10.0"
+          }
+        }
+      },
+      "Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime/8.0.10": {
+        "dependencies": {
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.10",
+          "Npgsql.NodaTime": "8.0.5"
+        },
+        "runtime": {
+          "lib/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime.dll": {
+            "assemblyVersion": "8.0.10.0",
+            "fileVersion": "8.0.10.0"
+          }
+        }
+      },
+      "Npgsql.NodaTime/8.0.5": {
+        "dependencies": {
+          "NodaTime": "3.2.0",
+          "Npgsql": "8.0.5"
+        },
+        "runtime": {
+          "lib/net6.0/Npgsql.NodaTime.dll": {
+            "assemblyVersion": "8.0.5.0",
+            "fileVersion": "8.0.5.0"
           }
         }
       },
@@ -780,6 +814,13 @@
       "path": "mono.texttemplating/2.2.1",
       "hashPath": "mono.texttemplating.2.2.1.nupkg.sha512"
     },
+    "NodaTime/3.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yoRA3jEJn8NM0/rQm78zuDNPA3DonNSZdsorMUj+dltc1D+/Lc5h9YXGqbEEZozMGr37lAoYkcSM/KjTVqD0ow==",
+      "path": "nodatime/3.2.0",
+      "hashPath": "nodatime.3.2.0.nupkg.sha512"
+    },
     "Npgsql/8.0.5": {
       "type": "package",
       "serviceable": true,
@@ -793,6 +834,20 @@
       "sha512": "sha512-gFPl9Dmxih7Yi4tZ3bITzZFzbxFMBx04gqTqcjoL2r5VEW+O2TA5UVw/wm/XW26NAJ7sg59Je0+9QrwiZt6MPQ==",
       "path": "npgsql.entityframeworkcore.postgresql/8.0.10",
       "hashPath": "npgsql.entityframeworkcore.postgresql.8.0.10.nupkg.sha512"
+    },
+    "Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime/8.0.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hxa3uWxyZ8WOAiMXgpsp7LteRgthdZ6jlx0RJY/EWINWQVtzkFQ1qs+J4NBaMLd0HQdABuzyYP/lQ3GNtJ004Q==",
+      "path": "npgsql.entityframeworkcore.postgresql.nodatime/8.0.10",
+      "hashPath": "npgsql.entityframeworkcore.postgresql.nodatime.8.0.10.nupkg.sha512"
+    },
+    "Npgsql.NodaTime/8.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oC7Ml5TDuQlcGECB5ML0XsPxFrYu3OdpG7c9cuqhB+xunLvqbZ0zXQoPJjvXK9KDNPDB/II61HNdsNas9f2J3A==",
+      "path": "npgsql.nodatime/8.0.5",
+      "hashPath": "npgsql.nodatime.8.0.5.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore/6.4.0": {
       "type": "package",

@@ -7,4 +7,6 @@ public class UnavailabilityDto
     public DateTime StartDateTime { get; set; }  // Combine Date and TimeSpan to DateTime
     public DateTime EndDateTime { get; set; }    // Combine Date and TimeSpan to DateTime
     public bool IsAllDay { get; set; }
+    public DateTime StartTime { get; set; }
+    public DateTime EndTime { get; set; }
 }
