@@ -13,11 +13,11 @@ namespace AppointmentManagement.Models
         [Column("patient_name")]
         [Required]
         [StringLength(255)]
-        public string PatientName { get; set; }
+        public string? PatientName { get; set; }
 
         [Column("patient_number")]
         [StringLength(20)]
-        public string PatientPhone { get; set; }
+        public string? PatientPhone { get; set; }
 
         [Column("patient_id")]
         public Guid PatientId { get; set; }
@@ -27,7 +27,7 @@ namespace AppointmentManagement.Models
 
         [Column("type")]
         [StringLength(100)]
-        public string Type { get; set; }
+        public string? Type { get; set; }
 
         [Column("start_at", TypeName = "timestamp with time zone")]
         public DateTime StartAt { get; set; }
@@ -43,15 +43,12 @@ namespace AppointmentManagement.Models
 
         [Column("booking_channel")]
         [StringLength(100)]
-        public string BookingChannel { get; set; }
+        public string? BookingChannel { get; set; }
 
         [Column("created_at", TypeName = "timestamp with time zone")]
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
         [Column("updated_at", TypeName = "timestamp with time zone")]
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
-
-        [Column("showed_up")]
-        public bool ShowedUp { get; set; }
     }
 }

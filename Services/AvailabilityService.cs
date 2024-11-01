@@ -3,19 +3,12 @@ using AppointmentManagement.Repositories;
 using AppointmentManagement.Models;
 
 namespace AppointmentManagement.Services;
-public class AvailabilityService : IAvailabilityService
+public class AvailabilityService(IAvailabilityRepository availabilityRepository) : IAvailabilityService
 {
-    private readonly IAvailabilityRepository _availabilityRepository;
-
-    public AvailabilityService(IAvailabilityRepository availabilityRepository)
-    {
-        _availabilityRepository = availabilityRepository;
-    }
-
     // Get unavailabilities for a specific clinic within a date range
     public async Task<IEnumerable<UnavailabilityDto>> GetClinicUnavailabilities(Guid clinicId, DateTime startDate, DateTime endDate)
     {
-        var unavailabilities = await _availabilityRepository.GetClinicUnavailabilities(clinicId, startDate, endDate);
+        var unavailabilities = await availabilityRepository.GetClinicUnavailabilities(clinicId, startDate, endDate);
         return unavailabilities.Select(u => new UnavailabilityDto
         {
             Id = u.Id,
@@ -37,13 +30,13 @@ public class AvailabilityService : IAvailabilityService
             EndTime = new DateTime(a.EndTime.Ticks)      // Fixed
         }).ToList();
 
-        await _availabilityRepository.CreateAvailabilities(availabilityEntities);
+        await availabilityRepository.CreateAvailabilities(availabilityEntities);
     }
 
     // Get all availabilities for a clinic
     public async Task<IEnumerable<AvailabilityDto>> GetClinicAvailabilities(Guid clinicId)
     {
-        var availabilities = await _availabilityRepository.GetClinicAvailabilities(clinicId);
+        var availabilities = await availabilityRepository.GetClinicAvailabilities(clinicId);
         return availabilities.Select(a => new AvailabilityDto
         {
             Id = a.Id,
@@ -57,6 +50,6 @@ public class AvailabilityService : IAvailabilityService
     // Remove an availability by ID
     public async Task<bool> RemoveAvailability(Guid id)
     {
-        return await _availabilityRepository.RemoveAvailability(id);
+        return await availabilityRepository.RemoveAvailability(id);
     }
 }

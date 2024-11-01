@@ -1,126 +1,145 @@
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 using AppointmentManagement.Models;
-using Microsoft.EntityFrameworkCore;
 
-namespace AppointmentManagement.Data;
-
-public class DataSeeder
+namespace AppointmentManagement.Data
 {
-    public static async Task SeedData(AppDbContext context)
+    public static class DataSeeder
     {
-        if (!await context.Clinics.AnyAsync())
+        public static async Task SeedData(AppDbContext context)
         {
-            await context.Clinics.AddRangeAsync(
-                new Clinic
-                {
-                    Id = Guid.NewGuid(),
-                    Name = "City Clinic",
-                    Title = "General Clinic",
-                    PictureUrl = "https://example.com/clinic1.jpg",
-                    Specialty = "General",
-                    Address = "123 Main St",
-                    DetailedAddress = "Suite 101",
-                    MapUrl = "https://maps.example.com/clinic1",
-                    AllowNewPatientBooking = true,
-                    AllowPatientBooking = true,
-                    CreatedAt = DateTime.UtcNow,
-                    UpdatedAt = DateTime.UtcNow
-                },
-                new Clinic
-                {
-                    Id = Guid.NewGuid(),
-                    Name = "Health Clinic",
-                    Title = "Specialized Clinic",
-                    PictureUrl = "https://example.com/clinic2.jpg",
-                    Specialty = "Cardiology",
-                    Address = "456 Health St",
-                    DetailedAddress = "Suite 202",
-                    MapUrl = "https://maps.example.com/clinic2",
-                    AllowNewPatientBooking = true,
-                    AllowPatientBooking = true,
-                    CreatedAt = DateTime.UtcNow,
-                    UpdatedAt = DateTime.UtcNow
-                }
-            );
-        }
-
-        if (!await context.Appointments.AnyAsync())
-        {
-            await context.Appointments.AddRangeAsync(
-                new Appointment
+            if (!context.Appointments.Any())
+            {
+                context.Appointments.Add(new Appointment
                 {
                     Id = Guid.NewGuid(),
                     PatientName = "John Doe",
-                    PatientPhone = "555-1234",
-                    StartAt = DateTime.UtcNow.AddHours(1),
-                    EndAt = DateTime.UtcNow.AddHours(2),
-                    Type = "Consultation",
-                    Status = 1,
+                    PatientPhone = "1234567890",
+                    PatientId = Guid.NewGuid(),
                     ClinicId = Guid.NewGuid(),
-                    Notes = "First-time visit",
-                    BookingChannel = "Online"
-                },
-                new Appointment
+                    Type = "General Checkup",
+                    StartAt = new DateTime(2023, 12, 1, 9, 0, 0, DateTimeKind.Utc), // Valid and UTC Kind
+                    EndAt = new DateTime(2023, 12, 1, 10, 0, 0, DateTimeKind.Utc),  // Valid and UTC Kind
+                    Notes = "First appointment",
+                    Status = 1,
+                    BookingChannel = "Online",
+                    CreatedAt = DateTime.UtcNow,
+                    UpdatedAt = DateTime.UtcNow,
+                });
+
+                await context.SaveChangesAsync();
+            }
+
+            if (!context.AppointmentTypes.Any())
+            {
+                context.AppointmentTypes.Add(new AppointmentType
                 {
                     Id = Guid.NewGuid(),
-                    PatientName = "Jane Smith",
-                    PatientPhone = "555-5678",
-                    StartAt = DateTime.UtcNow.AddDays(1),
-                    EndAt = DateTime.UtcNow.AddDays(1).AddHours(1),
-                    Type = "Follow-up",
-                    Status = 1,
                     ClinicId = Guid.NewGuid(),
-                    Notes = "Follow-up for previous consultation",
-                    BookingChannel = "Phone"
-                }
-            );
-        }
+                    Name = "General Checkup",
+                    CreatedAt = DateTime.UtcNow
+                });
 
-        if (!await context.Availabilities.AnyAsync())
-        {
-            await context.Availabilities.AddRangeAsync(
-                new Availability
+                context.AppointmentTypes.Add(new AppointmentType
+                {
+                    Id = Guid.NewGuid(),
+                    ClinicId = Guid.NewGuid(),
+                    Name = "Specialist Consultation",
+                    CreatedAt = DateTime.UtcNow
+                });
+
+                await context.SaveChangesAsync();
+            }
+
+            if (!context.Availabilities.Any())
+            {
+                context.Availabilities.Add(new Availability
                 {
                     Id = Guid.NewGuid(),
                     ClinicId = Guid.NewGuid(),
                     DayOfWeek = 1, // Monday
-                    StartTime = new DateTime(9, 0, 0),
-                    EndTime = new DateTime(17, 0, 0)
-                },
-                new Availability
+                    StartTime = new DateTime(2023, 12, 1, 9, 0, 0, DateTimeKind.Utc),
+                    EndTime = new DateTime(2023, 12, 1, 17, 0, 0, DateTimeKind.Utc),
+                    CreatedAt = DateTime.UtcNow
+                });
+
+                context.Availabilities.Add(new Availability
                 {
                     Id = Guid.NewGuid(),
                     ClinicId = Guid.NewGuid(),
                     DayOfWeek = 2, // Tuesday
-                    StartTime = new DateTime(9, 0, 0),
-                    EndTime = new DateTime(17, 0, 0)
-                }
-            );
-        }
+                    StartTime = new DateTime(2023, 12, 2, 9, 0, 0, DateTimeKind.Utc),
+                    EndTime = new DateTime(2023, 12, 2, 17, 0, 0, DateTimeKind.Utc),
+                    CreatedAt = DateTime.UtcNow
+                });
 
-        if (!await context.Unavailabilities.AnyAsync())
-        {
-            await context.Unavailabilities.AddRangeAsync(
-                new Unavailability
+                await context.SaveChangesAsync();
+            }
+
+            if (!context.Clinics.Any())
+            {
+                context.Clinics.Add(new Clinic
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Health Clinic",
+                    Title = "General Health Clinic",
+                    PictureUrl = "http://example.com/clinic.jpg",
+                    Specialty = "General Medicine",
+                    Address = "123 Main St",
+                    DetailedAddress = "Suite 100",
+                    MapUrl = "http://example.com/map",
+                    AllowNewPatientBooking = true,
+                    AllowPatientBooking = true,
+                    CreatedAt = DateTime.UtcNow,
+                    UpdatedAt = DateTime.UtcNow
+                });
+
+                context.Clinics.Add(new Clinic
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Specialist Clinic",
+                    Title = "Specialist Health Clinic",
+                    PictureUrl = "http://example.com/specialist.jpg",
+                    Specialty = "Cardiology",
+                    Address = "456 Elm St",
+                    DetailedAddress = "Suite 200",
+                    MapUrl = "http://example.com/map2",
+                    AllowNewPatientBooking = true,
+                    AllowPatientBooking = true,
+                    CreatedAt = DateTime.UtcNow,
+                    UpdatedAt = DateTime.UtcNow
+                });
+
+                await context.SaveChangesAsync();
+            }
+
+            if (!context.Unavailabilities.Any())
+            {
+                context.Unavailabilities.Add(new Unavailability
                 {
                     Id = Guid.NewGuid(),
                     ClinicId = Guid.NewGuid(),
-                    Date = DateTime.UtcNow.Date,
-                    StartTime = TimeSpan.FromHours(DateTime.UtcNow.AddHours(-1).Hour), // Changed to TimeSpan
-                    EndTime = TimeSpan.FromHours(DateTime.UtcNow.AddHours(1).Hour),    // Changed to TimeSpan
-                    IsAllDay = false
-                },
-                new Unavailability
+                    Date = new DateTime(2023, 12, 25, 0, 0, 0, DateTimeKind.Utc), // Christmas
+                    StartTime = new TimeSpan(0, 0, 0),
+                    EndTime = new TimeSpan(23, 59, 59),
+                    IsAllDay = true,
+                    CreatedAt = DateTime.UtcNow
+                });
+
+                context.Unavailabilities.Add(new Unavailability
                 {
                     Id = Guid.NewGuid(),
                     ClinicId = Guid.NewGuid(),
-                    Date = DateTime.UtcNow.AddDays(2).Date,
-                    StartTime = TimeSpan.FromHours(DateTime.UtcNow.AddDays(2).Hour),                // Changed to TimeSpan
-                    EndTime = TimeSpan.FromHours(DateTime.UtcNow.AddDays(2).AddHours(3).Hour),      // Changed to TimeSpan
-                    IsAllDay = false
-                }
-            );
-        }
+                    Date = new DateTime(2023, 1, 1, 0, 0, 0, DateTimeKind.Utc), // New Year's Day
+                    StartTime = new TimeSpan(0, 0, 0),
+                    EndTime = new TimeSpan(23, 59, 59),
+                    IsAllDay = true,
+                    CreatedAt = DateTime.UtcNow
+                });
 
-        await context.SaveChangesAsync();
+                await context.SaveChangesAsync();
+            }
+        }
     }
 }

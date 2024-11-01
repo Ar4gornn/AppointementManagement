@@ -15,7 +15,7 @@ namespace AppointmentManagement.Models
 
         [Column("name")]
         [StringLength(100)]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         [Column("created_at", TypeName = "timestamp with time zone")]
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;

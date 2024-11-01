@@ -3,18 +3,11 @@ using AppointmentManagement.Models;
 using AppointmentManagement.DTO;
 
 namespace AppointmentManagement.Services;
-public class AppointmentTypeService : IAppointmentTypeService
+public class AppointmentTypeService(IAppointmentTypeRepository appointmentTypeRepo) : IAppointmentTypeService
 {
-    private readonly IAppointmentTypeRepository _appointmentTypeRepo;
-
-    public AppointmentTypeService(IAppointmentTypeRepository appointmentTypeRepo)
-    {
-        _appointmentTypeRepo = appointmentTypeRepo;
-    }
-
     public async Task<IEnumerable<AppointmentTypeDto>> GetAllAppointmentTypes()
     {
-        var appointmentTypes = await _appointmentTypeRepo.GetAllAppointmentTypes();
+        var appointmentTypes = await appointmentTypeRepo.GetAllAppointmentTypes();
         return appointmentTypes.Select(a => new AppointmentTypeDto
         {
             Id = a.Id,
@@ -30,7 +23,7 @@ public class AppointmentTypeService : IAppointmentTypeService
             Name = dto.Name
         };
 
-        await _appointmentTypeRepo.AddAppointmentType(appointmentType);
+        await appointmentTypeRepo.AddAppointmentType(appointmentType);
 
         return new AppointmentTypeDto
         {
@@ -41,6 +34,6 @@ public class AppointmentTypeService : IAppointmentTypeService
 
     public async Task<bool> DeleteAppointmentType(Guid id)
     {
-        return await _appointmentTypeRepo.DeleteAppointmentType(id);
+        return await appointmentTypeRepo.DeleteAppointmentType(id);
     }
 }

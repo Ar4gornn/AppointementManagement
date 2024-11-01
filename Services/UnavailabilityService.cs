@@ -3,18 +3,11 @@ using AppointmentManagement.Models;
 using AppointmentManagement.DTO;
 
 namespace AppointmentManagement.Services;
-public class UnavailabilityService : IUnavailabilityService
+public class UnavailabilityService(IUnavailabilityRepository unavailabilityRepo) : IUnavailabilityService
 {
-    private readonly IUnavailabilityRepository _unavailabilityRepo;
-
-    public UnavailabilityService(IUnavailabilityRepository unavailabilityRepo)
-    {
-        _unavailabilityRepo = unavailabilityRepo;
-    }
-
     public async Task<IEnumerable<UnavailabilityDto>> GetUnavailabilityByClinicId(Guid clinicId)
     {
-        var unavailabilities = await _unavailabilityRepo.GetUnavailabilityByClinicId(clinicId);
+        var unavailabilities = await unavailabilityRepo.GetUnavailabilityByClinicId(clinicId);
         return unavailabilities.Select(u => new UnavailabilityDto
         {
             Id = u.Id,
@@ -37,7 +30,7 @@ public class UnavailabilityService : IUnavailabilityService
             IsAllDay = dto.IsAllDay
         };
 
-        await _unavailabilityRepo.AddUnavailability(unavailability);
+        await unavailabilityRepo.AddUnavailability(unavailability);
 
         return new UnavailabilityDto
         {
@@ -51,6 +44,6 @@ public class UnavailabilityService : IUnavailabilityService
 
     public async Task<bool> DeleteUnavailability(Guid id)
     {
-        return await _unavailabilityRepo.DeleteUnavailability(id);
+        return await unavailabilityRepo.DeleteUnavailability(id);
     }
 }

@@ -6,20 +6,13 @@ namespace AppointmentManagement.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class AvailabilityController : ControllerBase
+public class AvailabilityController(IAvailabilityService availabilityService) : ControllerBase
 {
-    private readonly IAvailabilityService _availabilityService;
-
-    public AvailabilityController(IAvailabilityService availabilityService)
-    {
-        _availabilityService = availabilityService;
-    }
-
     // Get unavailabilities for a specific clinic within a date range
     [HttpGet("unavailabilities")]
     public async Task<ActionResult<IEnumerable<UnavailabilityDto>>> GetClinicUnavailabilities(Guid clinicId, DateTime startDate, DateTime endDate)
     {
-        var unavailabilities = await _availabilityService.GetClinicUnavailabilities(clinicId, startDate, endDate);
+        var unavailabilities = await availabilityService.GetClinicUnavailabilities(clinicId, startDate, endDate);
         return Ok(unavailabilities);
     }
 
@@ -27,7 +20,7 @@ public class AvailabilityController : ControllerBase
     [HttpPost("availabilities")]
     public async Task<IActionResult> CreateAvailabilities(Guid clinicId, List<CreateAvailabilityDto> availabilities)
     {
-        await _availabilityService.CreateAvailabilities(clinicId, availabilities);
+        await availabilityService.CreateAvailabilities(clinicId, availabilities);
         return StatusCode(201);
     }
 
@@ -35,7 +28,7 @@ public class AvailabilityController : ControllerBase
     [HttpGet("availabilities/{clinicId}")]
     public async Task<ActionResult<IEnumerable<AvailabilityDto>>> GetClinicAvailabilities(Guid clinicId)
     {
-        var availabilities = await _availabilityService.GetClinicAvailabilities(clinicId);
+        var availabilities = await availabilityService.GetClinicAvailabilities(clinicId);
         return Ok(availabilities);
     }
 
@@ -43,7 +36,7 @@ public class AvailabilityController : ControllerBase
     [HttpDelete("availabilities/{id}")]
     public async Task<IActionResult> RemoveAvailability(Guid id)
     {
-        var removed = await _availabilityService.RemoveAvailability(id);
+        var removed = await availabilityService.RemoveAvailability(id);
         if (!removed)
             return NotFound();
         return NoContent();

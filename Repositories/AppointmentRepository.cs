@@ -4,51 +4,44 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AppointmentManagement.Repositories
 {
-    public class AppointmentRepository : IAppointmentRepository
+    public class AppointmentRepository(AppDbContext context) : IAppointmentRepository
     {
-        private readonly AppDbContext _context;
-
-        public AppointmentRepository(AppDbContext context)
-        {
-            _context = context;
-        }
-
         public async Task<IEnumerable<Appointment>> GetAllAppointments()
         {
-            return await _context.Appointments.ToListAsync();
+            return await context.Appointments.ToListAsync();
         }
 
         public async Task<Appointment> GetAppointmentById(Guid id)
         {
-            return await _context.Appointments.FindAsync(id);
+            return await context.Appointments.FindAsync(id);
         }
 
         public async Task<Appointment> AddAppointment(Appointment appointment)
         {
-            _context.Appointments.Add(appointment);
-            await _context.SaveChangesAsync();
+            context.Appointments.Add(appointment);
+            await context.SaveChangesAsync();
             return appointment;
         }
 
         public async Task<Appointment> UpdateAppointment(Appointment appointment)
         {
-            _context.Appointments.Update(appointment);
-            await _context.SaveChangesAsync();
+            context.Appointments.Update(appointment);
+            await context.SaveChangesAsync();
             return appointment;
         }
 
         public async Task<bool> DeleteAppointment(Guid id)
         {
-            var appointment = await _context.Appointments.FindAsync(id);
+            var appointment = await context.Appointments.FindAsync(id);
             if (appointment == null) return false;
 
-            _context.Appointments.Remove(appointment);
-            await _context.SaveChangesAsync();
+            context.Appointments.Remove(appointment);
+            await context.SaveChangesAsync();
             return true;
         }
         public async Task<IEnumerable<Appointment>> GetAppointmentsByClinicId(Guid clinicId, DateTime startDate, DateTime endDate)
         {
-            return await _context.Appointments
+            return await context.Appointments
                 .Where(a => a.ClinicId == clinicId && a.StartAt >= startDate && a.EndAt <= endDate)
                 .ToListAsync();
         }
@@ -60,7 +53,7 @@ namespace AppointmentManagement.Repositories
                 throw new ArgumentException("Invalid patient ID format", nameof(patientId));
             }
 
-            return await _context.Appointments
+            return await context.Appointments
                 .Where(a => a.PatientId == patientGuid && a.StartAt >= from && a.EndAt <= to)
                 .ToListAsync();
         }

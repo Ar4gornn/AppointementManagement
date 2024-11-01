@@ -9,24 +9,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="092bd0fb-1cac-4791-9ce1-eb1a1a411db7" name="Changes" comment="15 Commit">
+    <list default="true" id="092bd0fb-1cac-4791-9ce1-eb1a1a411db7" name="Changes" comment="16 Commit">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AppointmentManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AppointmentManagement/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppointmentManagement.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/AppointmentManagement.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DTO/UnavailabilityDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DTO/UnavailabilityDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/AppointmentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/AppointmentController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/AppointmentTypeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/AppointmentTypeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/AvailabilityController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/AvailabilityController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/UnavailabilityController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UnavailabilityController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/AppDbContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/DataSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/DataSeeder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/Appointment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Appointment.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Unavailability.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Unavailability.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/AppointmentType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/AppointmentType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Clinic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Clinic.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repositories/AppointmentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/AppointmentRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Repositories/AvailabilityRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/AvailabilityRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/AppointmentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/AppointmentService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/AppointmentTypeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/AppointmentTypeService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/AvailabilityService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/AvailabilityService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/AppointmentManagement.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/AppointmentManagement.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/IAppointmentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/IAppointmentService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/UnavailabilityService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/UnavailabilityService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/AppointmentManagement.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/AppointmentManagement.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/AppointmentManagement.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/AppointmentManagement.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/AppointmentManagement.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/AppointmentManagement.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.sourcelink.json" afterDir="false" />
@@ -102,7 +108,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.AppointmentManagement: https">
+  <component name="RunManager" selected=".NET Launch Settings Profile.AppointmentManagement: http">
     <configuration name="AppointmentManagement: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/AppointmentManagement.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
@@ -173,7 +179,7 @@
       <workItem from="1730204164009" duration="290000" />
       <workItem from="1730204578122" duration="14276000" />
       <workItem from="1730290967175" duration="17434000" />
-      <workItem from="1730460678093" duration="10810000" />
+      <workItem from="1730460678093" duration="14158000" />
     </task>
     <task id="LOCAL-00001" summary="Innitial Commit">
       <option name="closed" value="true" />
@@ -327,7 +333,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730468444617</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="16 Commit">
+      <option name="closed" value="true" />
+      <created>1730472093479</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1730472093479</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -372,7 +386,27 @@
     <MESSAGE value="13 commit" />
     <MESSAGE value="14 Commit" />
     <MESSAGE value="15 Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="15 Commit" />
+    <MESSAGE value="16 Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="16 Commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Program.cs</url>
+          <line>38</line>
+          <properties documentPath="C:\Users\alexg\OneDrive\Desktop\AppointmentManagement\Program.cs" containingFunctionPresentation="">
+            <startOffsets>
+              <option value="1116" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1151" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

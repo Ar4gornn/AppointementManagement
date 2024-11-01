@@ -6,33 +6,26 @@ namespace AppointmentManagement.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class UnavailabilityController : ControllerBase
+    public class UnavailabilityController(IUnavailabilityService unavailabilityService) : ControllerBase
     {
-        private readonly IUnavailabilityService _unavailabilityService;
-
-        public UnavailabilityController(IUnavailabilityService unavailabilityService)
-        {
-            _unavailabilityService = unavailabilityService;
-        }
-
         [HttpGet("{clinicId}")]
         public async Task<ActionResult<IEnumerable<UnavailabilityDto>>> GetUnavailability(Guid clinicId)
         {
-            var unavailabilities = await _unavailabilityService.GetUnavailabilityByClinicId(clinicId);
+            var unavailabilities = await unavailabilityService.GetUnavailabilityByClinicId(clinicId);
             return Ok(unavailabilities);
         }
 
         [HttpPost]
         public async Task<ActionResult<UnavailabilityDto>> CreateUnavailability([FromBody] CreateUnavailabilityDto createUnavailabilityDto)
         {
-            var newUnavailability = await _unavailabilityService.CreateUnavailability(createUnavailabilityDto);
+            var newUnavailability = await unavailabilityService.CreateUnavailability(createUnavailabilityDto);
             return CreatedAtAction(nameof(GetUnavailability), new { clinicId = newUnavailability.ClinicId }, newUnavailability);
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUnavailability(Guid id)
         {
-            var deleted = await _unavailabilityService.DeleteUnavailability(id);
+            var deleted = await unavailabilityService.DeleteUnavailability(id);
             if (!deleted)
             {
                 return NotFound();
