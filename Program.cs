@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllers();
 
-// Add PostgresSQL connection
+// Add PostgreSQL connection
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -32,11 +32,15 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
 
-//using (var scope = app.Services.CreateScope())
-//{
-  //  var services = scope.ServiceProvider;
-    //var context = services.GetRequiredService<AppDbContext>();
-    //await DataSeeder.SeedData(context);
-//}
+// Seed data
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<AppDbContext>();
+    
+    // Ensure the database is created before seeding
+    await context.Database.MigrateAsync();
+    await DataSeeder.SeedData(context);
+}
 
 app.Run();

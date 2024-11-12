@@ -36,7 +36,7 @@ namespace AppointmentManagement.Models
         public DateTime EndAt { get; set; }
 
         [Column("notes")]
-        public string Notes { get; set; }
+        public string? Notes { get; set; }
 
         [Column("status")]
         public int Status { get; set; }

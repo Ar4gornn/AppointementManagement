@@ -52,17 +52,20 @@ namespace AppointmentManagement.Controllers
         [HttpPut("{appointmentId}/approve")]
         public async Task<ActionResult<ReadAppointmentDto>> ApproveAppointment(Guid appointmentId, bool isApproved)
         {
+            
             var appointment = await appointmentService.ApproveAppointment(appointmentId, isApproved);
             return Ok(appointment);
         }
 
         // Set appointment as "showed up"
-        //[HttpPut("{appointmentId}/showed-up")]
-        //public async Task<ActionResult<ReadAppointmentDto>> SetAppointmentShowedUp(Guid appointmentId, bool showedUp)
-        //{
-          //  var appointment = await _appointmentService.SetAppointmentShowedUp(appointmentId, showedUp);
-            //return Ok(appointment);
-        //}
+        [HttpPut("{appointmentId}/showed-up")]
+        public async Task<ActionResult<ReadAppointmentDto>> SetAppointmentShowedUp(Guid appointmentId, bool showedUp)
+        {
+            Request.Headers.TryGetValue("X-User-Info", out var userInfo);
+            if (userInfo != "admin") return Unauthorized();
+            var appointment = await _appointmentService.SetAppointmentShowedUp(appointmentId, showedUp);
+            return Ok(appointment);
+        }
 
         // Get all appointments by Patient ID within a date range
         [HttpGet("patient/{patientId}")]

@@ -9,25 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="092bd0fb-1cac-4791-9ce1-eb1a1a411db7" name="Changes" comment="16 Commit">
+    <list default="true" id="092bd0fb-1cac-4791-9ce1-eb1a1a411db7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AppointmentManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AppointmentManagement/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/AppointmentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/AppointmentController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/AppointmentTypeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/AppointmentTypeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/AvailabilityController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/AvailabilityController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/UnavailabilityController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UnavailabilityController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/AppDbContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/DataSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/DataSeeder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/Appointment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Appointment.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/AppointmentType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/AppointmentType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Clinic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Clinic.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repositories/AppointmentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/AppointmentRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repositories/AvailabilityRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/AvailabilityRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/AppointmentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/AppointmentService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/AppointmentTypeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/AppointmentTypeService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/AvailabilityService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/AvailabilityService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/IAppointmentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/IAppointmentService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/UnavailabilityService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/UnavailabilityService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/AppointmentManagement.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/AppointmentManagement.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/AppointmentManagement.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/AppointmentManagement.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/AppointmentManagement.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/AppointmentManagement.pdb" afterDir="false" />
@@ -39,6 +26,7 @@
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/ref/AppointmentManagement.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/ref/AppointmentManagement.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/refint/AppointmentManagement.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/refint/AppointmentManagement.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,12 +48,12 @@
     &quot;assignee&quot;: &quot;Ar4gornn&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Ar4gornn/AppointementManagement.git",
-    "accountId": "122cedf6-d63c-4b62-9340-555aa42bdd66"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Ar4gornn/AppointementManagement.git&quot;,
+    &quot;accountId&quot;: &quot;122cedf6-d63c-4b62-9340-555aa42bdd66&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/24372012c6c94138bf3f496e104366ffc8f918/7c/97ea2072/Object.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2c8e7ca976f350cba9836d5565dac56b11e0b56656fa786460eb1395857a6fa/ThrowHelper.cs" root0="FORCE_HIGHLIGHTING" />
@@ -85,29 +73,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.AppointmentManagement: IIS Express.executor": "Run",
-    ".NET Launch Settings Profile.AppointmentManagement: http.executor": "Run",
-    ".NET Launch Settings Profile.AppointmentManagement: https.executor": "Run",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.github.copilot.settings.ApplicationConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.AppointmentManagement: IIS Express.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Launch Settings Profile.AppointmentManagement: http.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Launch Settings Profile.AppointmentManagement: https.executor&quot;: &quot;Run&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.github.copilot.settings.ApplicationConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.AppointmentManagement: http">
     <configuration name="AppointmentManagement: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/AppointmentManagement.csproj" />
@@ -179,7 +167,8 @@
       <workItem from="1730204164009" duration="290000" />
       <workItem from="1730204578122" duration="14276000" />
       <workItem from="1730290967175" duration="17434000" />
-      <workItem from="1730460678093" duration="14158000" />
+      <workItem from="1730460678093" duration="17068000" />
+      <workItem from="1730740992201" duration="328000" />
     </task>
     <task id="LOCAL-00001" summary="Innitial Commit">
       <option name="closed" value="true" />
@@ -341,7 +330,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730472093479</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary=" Commit 17">
+      <option name="closed" value="true" />
+      <created>1730475365435</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1730475365435</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -387,26 +384,8 @@
     <MESSAGE value="14 Commit" />
     <MESSAGE value="15 Commit" />
     <MESSAGE value="16 Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="16 Commit" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Program.cs</url>
-          <line>38</line>
-          <properties documentPath="C:\Users\alexg\OneDrive\Desktop\AppointmentManagement\Program.cs" containingFunctionPresentation="">
-            <startOffsets>
-              <option value="1116" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1151" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value=" Commit 17" />
+    <option name="LAST_COMMIT_MESSAGE" value=" Commit 17" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
