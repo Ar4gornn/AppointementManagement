@@ -10,6 +10,7 @@ namespace AppointmentManagement.Services
         Task DeleteAppointment(Guid appointmentId);
         Task<ReadAppointmentDto> UpdateAppointment(Guid appointmentId, UpdateAppointmentDto updateAppointmentDto);
         Task<ReadAppointmentDto> ApproveAppointment(Guid appointmentId, bool isApproved);
+        Task<ReadAppointmentDto> SetAppointmentShowedUp(Guid appointmentId, bool showedUp);
         Task<IEnumerable<ReadAppointmentDto>> GetAppointmentsByPatientId(string patientId, DateTime from, DateTime to);
     }
 }

@@ -10,23 +10,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="092bd0fb-1cac-4791-9ce1-eb1a1a411db7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AppointmentManagement/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AppointmentManagement/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AppointmentManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AppointmentManagement/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/AppointmentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/AppointmentController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/DataSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/DataSeeder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/Appointment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Appointment.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/AppointmentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/AppointmentService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/IAppointmentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/IAppointmentService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.Development.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/AppointmentManagement.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/AppointmentManagement.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/AppointmentManagement.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/AppointmentManagement.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/AppointmentManagement.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/AppointmentManagement.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net8.0/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net8.0/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/AppointmentManagement.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/AppointmentManagement.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/AppointmentManagement.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/AppointmentManagement.csproj.nuget.g.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/AppointmentManagement.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/ref/AppointmentManagement.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/ref/AppointmentManagement.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net8.0/refint/AppointmentManagement.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net8.0/refint/AppointmentManagement.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +92,7 @@
     &quot;.NET Launch Settings Profile.AppointmentManagement: https.executor&quot;: &quot;Run&quot;,
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -169,6 +182,15 @@
       <workItem from="1730290967175" duration="17434000" />
       <workItem from="1730460678093" duration="17068000" />
       <workItem from="1730740992201" duration="328000" />
+      <workItem from="1732375104394" duration="727000" />
+      <workItem from="1733338842471" duration="765000" />
+      <workItem from="1734280154707" duration="503000" />
+      <workItem from="1734476008989" duration="3653000" />
+      <workItem from="1734531553047" duration="450000" />
+      <workItem from="1734558305059" duration="229000" />
+      <workItem from="1734559113697" duration="2450000" />
+      <workItem from="1734626930004" duration="2845000" />
+      <workItem from="1734796737253" duration="578000" />
     </task>
     <task id="LOCAL-00001" summary="Innitial Commit">
       <option name="closed" value="true" />

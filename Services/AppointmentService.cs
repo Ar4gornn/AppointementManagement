@@ -63,5 +63,18 @@ namespace AppointmentManagement.Services
             var appointments = await appointmentRepository.GetAppointmentsByPatientId(patientId, from, to);
             return mapper.Map<IEnumerable<ReadAppointmentDto>>(appointments);
         }
+        
+        public async Task<ReadAppointmentDto> SetAppointmentShowedUp(Guid appointmentId, bool showedUp)
+        {
+            var appointment = await appointmentRepository.GetAppointmentById(appointmentId);
+            if (appointment == null) throw new KeyNotFoundException("Appointment not found");
+
+            appointment.Status = showedUp ? 2 : 1; // Example: 2 for showed up, 1 for not yet showed up
+            appointment.UpdatedAt = DateTime.UtcNow;
+
+            await appointmentRepository.UpdateAppointment(appointment);
+            return mapper.Map<ReadAppointmentDto>(appointment);
+        }
+
     }
 }

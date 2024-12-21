@@ -39,7 +39,7 @@ namespace AppointmentManagement.Models
         public string? Notes { get; set; }
 
         [Column("status")]
-        public int Status { get; set; }
+        public int Status { get; set; } 
 
         [Column("booking_channel")]
         [StringLength(100)]
@@ -48,7 +48,7 @@ namespace AppointmentManagement.Models
         [Column("created_at", TypeName = "timestamp with time zone")]
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
-        [Column("updated_at", TypeName = "timestamp with time zone")]
+        [Column("updated_at", TypeName = "timestamp with time zone")] //put latest updated or modified at
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
     }
 }

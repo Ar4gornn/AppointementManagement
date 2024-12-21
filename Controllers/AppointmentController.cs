@@ -63,9 +63,10 @@ namespace AppointmentManagement.Controllers
         {
             Request.Headers.TryGetValue("X-User-Info", out var userInfo);
             if (userInfo != "admin") return Unauthorized();
-            var appointment = await _appointmentService.SetAppointmentShowedUp(appointmentId, showedUp);
+            var appointment = await appointmentService.SetAppointmentShowedUp(appointmentId, showedUp);
             return Ok(appointment);
         }
+
 
         // Get all appointments by Patient ID within a date range
         [HttpGet("patient/{patientId}")]
